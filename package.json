@@ -3,12 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+"scripts": {
+  "build": "npm install && vite build"
+},
   "dependencies": {
     "@fontsource/dancing-script": "^5.1.1",
     "@fontsource/playfair-display": "^5.1.1",
