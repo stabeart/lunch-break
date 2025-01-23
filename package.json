@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
 "scripts": {
-  "build": "npm install && vite build"
+  "build": "node_modules/.bin/vite build"
 },
   "dependencies": {
     "@fontsource/dancing-script": "^5.1.1",
