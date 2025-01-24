@@ -3,17 +3,17 @@ import { Link, useLocation } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import TipJar from './TipJar';
 import DecorativeImages from './DecorativeImages';
-import plateImage from '../assets/images/plate.png';
+import plateImage from '../assets/images/plate.webp';
 import tableclothImage from '../assets/images/tablecloth6.png';
-import fishImage from '@/assets/images/fish.png';
-import orangeImage from '@/assets/images/orange.png';
-import tomatoImage from '@/assets/images/tomato.png';
-import strawberryImage from '@/assets/images/strawberry.png';
-import bottleCapImage from '@/assets/images/bottle cap.png';
-import popTabImage from '@/assets/images/pop tab.png';
-import romaTomatoImage from '@/assets/images/roma tomato.png';
-import forkImage from '@/assets/images/fork.png';
-import knifeImage from '@/assets/images/knife.png';
+import fishImage from '@/assets/images/fish.webp';
+import orangeImage from '@/assets/images/orange.webp';
+import tomatoImage from '@/assets/images/tomato.webp';
+import strawberryImage from '@/assets/images/strawberry.webp';
+import bottleCapImage from '@/assets/images/bottle cap.webp';
+import popTabImage from '@/assets/images/pop tab.webp';
+import romaTomatoImage from '@/assets/images/roma tomato.webp';
+import forkImage from '@/assets/images/fork.webp';
+import knifeImage from '@/assets/images/knife.webp';
 
 const PageLayout = ({ title, children, showMenuLink = true }) => {
   const location = useLocation();

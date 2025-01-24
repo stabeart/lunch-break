@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import tipJarImage from '@/assets/images/mason-jar-tips.png';
+import tipJarImage from '@/assets/images/mason-jar-tips.webp';
 
 const TipJar = () => {
   const [isWobbling, setIsWobbling] = useState(false);
