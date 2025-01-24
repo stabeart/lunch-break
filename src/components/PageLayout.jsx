@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import TipJar from './TipJar';
 import DecorativeImages from './DecorativeImages';
 import plateImage from '../assets/images/plate.png';
+import tableclothImage from '/public/tablecloth6.png';
+import fishImage from '@/assets/images/fish.png';
+import orangeImage from '@/assets/images/orange.png';
+import tomatoImage from '@/assets/images/tomato.png';
+import strawberryImage from '@/assets/images/strawberry.png';
+import bottleCapImage from '@/assets/images/bottle cap.png';
+import popTabImage from '@/assets/images/pop tab.png';
+import romaTomatoImage from '@/assets/images/roma tomato.png';
+import forkImage from '@/assets/images/fork.png';
+import knifeImage from '@/assets/images/knife.png';
 
 const styles = {
   georgia: {
@@ -79,6 +89,30 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
   // Determine if we're on a page that needs reduced spacing
   const isReducedSpacing = ['/submissions', '/about', '/donate'].includes(location.pathname);
 
+  useEffect(() => {
+    // Preload all images
+    const images = [
+      plateImage,
+      tableclothImage,
+      fishImage,
+      orangeImage,
+      tomatoImage,
+      strawberryImage,
+      bottleCapImage,
+      popTabImage,
+      romaTomatoImage,
+      forkImage,
+      knifeImage    ];
+ 
+    images.forEach(image => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = image;
+      document.head.appendChild(link);
+    });
+  }, []);
+
   const processChildren = (child) => {
     if (!React.isValidElement(child)) return child;
 
@@ -102,7 +136,7 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
       <div 
         className="fixed inset-0 z-0"
         style={{
-          backgroundImage: "url('src/assets/images/tablecloth6.png')",
+          backgroundImage: "url('/tablecloth6.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -185,7 +219,9 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
 
       {showTipJar && <TipJar />}
       
+      <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 2 }}>
       <DecorativeImages visibleImages={['fork', 'knife', 'fish', 'orange', 'pepper', 'popTab', 'romaTomato', 'strawberry', 'tomato', 'bottleCap']} />
+    </div>
     </div>
   );
 };
