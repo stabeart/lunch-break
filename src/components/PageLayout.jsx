@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 import TipJar from './TipJar';
 import DecorativeImages from './DecorativeImages';
 import plateImage from '../assets/images/plate.png';
-import tableclothImage from '/public/tablecloth6.png';
+import tableclothImage from '../assets/images/tablecloth6.png';
 import fishImage from '@/assets/images/fish.png';
 import orangeImage from '@/assets/images/orange.png';
 import tomatoImage from '@/assets/images/tomato.png';
@@ -14,83 +15,81 @@ import romaTomatoImage from '@/assets/images/roma tomato.png';
 import forkImage from '@/assets/images/fork.png';
 import knifeImage from '@/assets/images/knife.png';
 
-const styles = {
-  georgia: {
-    fontFamily: 'Perpetua',
-    fontWeight: 400
-  },
-  mainHeading: {
-    fontFamily: 'Perpetua Titling MT',
-    fontWeight: 700,
-    fontSize: '2.75rem',
-    color: '#000000'
-  },
-  subHeading: {
-    fontFamily: 'Perpetua',
-    fontWeight: 400,
-    fontSize: '2.25rem',
-    fontStyle: 'italic'
-  },
-  paperTexture: {
-    backgroundColor: '#FEFCE8',
-    backgroundImage: `
-      repeating-linear-gradient(
-        -45deg,
-        #00000003 0px,
-        #00000003 1px,
-        transparent 1px,
-        transparent 3px
-      ),
-      repeating-linear-gradient(
-        45deg,
-        #00000003 0px,
-        #00000003 1px,
-        transparent 1px,
-        transparent 3px
-      )
-    `,
-    backgroundSize: '4px 4px',
-    position: 'relative',
-    overflow: 'hidden'
-  },
-  noisyOverlay: {
-    content: '""',
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    opacity: 0.4,
-    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-    pointerEvents: 'none',
-    mixBlendMode: 'soft-light'
-  },
-  fixedTitle: {
-    position: 'fixed',
-    top: '1.5rem',
-    right: '2rem',
-    fontFamily: 'Perpetua Titling MT Bold, Perpetua, serif',
-    fontSize: '4.5rem',
-    fontWeight: 'bold',
-    color: '#000000',
-    letterSpacing: '0em',
-    zIndex: 50,
-    textShadow: '1px 1px 0px rgba(255, 255, 255, 0.5)',
-    pointerEvents: 'none',
-    lineHeight: '.55',
-    textAlign: 'right'
-  }
-};
-
 const PageLayout = ({ title, children, showMenuLink = true }) => {
   const location = useLocation();
   const showTipJar = location.pathname !== '/donate';
-  
-  // Determine if we're on a page that needs reduced spacing
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   const isReducedSpacing = ['/submissions', '/about', '/donate'].includes(location.pathname);
 
+  const styles = {
+    georgia: {
+      fontFamily: 'Perpetua',
+      fontWeight: 400
+    },
+    mainHeading: {
+      fontFamily: 'Perpetua Titling MT',
+      fontWeight: 700,
+      fontSize: isMobile ? '2rem' : '2.75rem',
+      color: '#000000'
+    },
+    subHeading: {
+      fontFamily: 'Perpetua',
+      fontWeight: 400,
+      fontSize: '2.25rem',
+      fontStyle: 'italic'
+    },
+    paperTexture: {
+      backgroundColor: '#FEFCE8',
+      backgroundImage: `
+        repeating-linear-gradient(
+          -45deg,
+          #00000003 0px,
+          #00000003 1px,
+          transparent 1px,
+          transparent 3px
+        ),
+        repeating-linear-gradient(
+          45deg,
+          #00000003 0px,
+          #00000003 1px,
+          transparent 1px,
+          transparent 3px
+        )
+      `,
+      backgroundSize: '4px 4px',
+      position: 'relative',
+      overflow: 'hidden'
+    },
+    noisyOverlay: {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      opacity: 0.4,
+      backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+      pointerEvents: 'none',
+      mixBlendMode: 'soft-light'
+    },
+    fixedTitle: {
+      position: 'fixed',
+      top: isMobile ? '0.5rem' : '1.5rem',
+      right: isMobile ? '1rem' : '2rem',
+      fontFamily: 'Perpetua Titling MT Bold, Perpetua, serif',
+      fontSize: isMobile ? '2.5rem' : '4.5rem',
+      fontWeight: 'bold',
+      color: '#000000',
+      letterSpacing: '0em',
+      zIndex: 50,
+      textShadow: '1px 1px 0px rgba(255, 255, 255, 0.5)',
+      pointerEvents: 'none',
+      lineHeight: '.55',
+      textAlign: 'right'
+    }
+  };
+
   useEffect(() => {
-    // Preload all images
     const images = [
       plateImage,
       tableclothImage,
@@ -102,7 +101,8 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
       popTabImage,
       romaTomatoImage,
       forkImage,
-      knifeImage    ];
+      knifeImage
+    ];
  
     images.forEach(image => {
       const link = document.createElement('link');
@@ -133,20 +133,24 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
 
   return (
     <div className="relative min-h-screen bg-white">
-      <div 
-        className="fixed inset-0 z-0"
-        style={{
-          backgroundImage: "url('/tablecloth6.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          opacity: .45
-        }}
-      />
+  <div 
+  className="fixed inset-0 z-0"
+  style={{
+    backgroundImage: `url(${tableclothImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    opacity: .45
+  }}
+/>
       
-      <div style={styles.fixedTitle}>
+      <div style={styles.fixedTitle} className={isMobile ? 'hidden sm:block' : ''}>
         LUNCHBREAK<br />
-        <span style={{ fontWeight: 'normal', fontStyle: 'italic', fontSize: '6rem' }}>review</span>
+        <span style={{ 
+          fontWeight: 'normal', 
+          fontStyle: 'italic', 
+          fontSize: isMobile ? '3rem' : '6rem' 
+        }}>review</span>
       </div>
       
       <div 
@@ -161,7 +165,7 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
         <img 
           src={plateImage}
           alt=""
-          className="w-[700px] h-[700px] object-contain opacity-90"
+          className={`object-contain opacity-90 ${isMobile ? 'w-[400px] h-[400px]' : 'w-[700px] h-[700px]'}`}
           style={{
             filter: 'brightness(1.2)'
           }}
@@ -187,7 +191,9 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
               {showMenuLink && (
                 <Link 
                   to="/" 
-                  className="text-2xl mb-4 block text-left hover:text-amber-800 transition-colors"
+                  className={`block text-left hover:text-amber-800 transition-colors ${
+                    isMobile ? 'text-xl mb-4' : 'text-2xl mb-4'
+                  }`}
                   style={styles.georgia}
                 >
                   ← Main Menu
@@ -201,7 +207,7 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
                 >
                   {title}
                 </h1>
-                <div className="text-[000000] text-lg">
+                <div className={`text-[000000] ${isMobile ? 'text-base' : 'text-lg'}`}>
                   {React.Children.map(children, child => {
                     if (React.isValidElement(child) && child.type === 'p') {
                       return React.cloneElement(child, {
@@ -217,11 +223,11 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
         </div>
       </div>
 
-      {showTipJar && <TipJar />}
+      {showTipJar && !isMobile && <TipJar />}
       
       <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 2 }}>
-      <DecorativeImages visibleImages={['fork', 'knife', 'fish', 'orange', 'pepper', 'popTab', 'romaTomato', 'strawberry', 'tomato', 'bottleCap']} />
-    </div>
+        <DecorativeImages visibleImages={['fork', 'knife', 'fish', 'orange', 'pepper', 'popTab', 'romaTomato', 'strawberry', 'tomato', 'bottleCap']} />
+      </div>
     </div>
   );
 };

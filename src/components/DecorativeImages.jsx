@@ -1,4 +1,5 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import fishImage from '@/assets/images/fish.png';
 import orangeImage from '@/assets/images/orange.png';
 import tomatoImage from '@/assets/images/tomato.png';
@@ -125,6 +126,10 @@ const decorativeImages = [
 ];
 
 const DecorativeImages = ({ visibleImages = [] }) => {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
+  if (isMobile) return null;
+
   return (
     <>
       {decorativeImages.map((image, index) => (
