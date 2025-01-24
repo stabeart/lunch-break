@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import TipJar from './TipJar';
 import DecorativeImages from './DecorativeImages';
-import plateImage from '@/images/plate.png';
+import plateImage from '../assets/images/plate.png';
 
 const styles = {
   georgia: {
@@ -102,7 +102,7 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
       <div 
         className="fixed inset-0 z-0"
         style={{
-          backgroundImage: "url('/images/tablecloth6.png')",
+          backgroundImage: "url('src/assets/images/tablecloth6.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

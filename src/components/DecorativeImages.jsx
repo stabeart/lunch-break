@@ -1,13 +1,13 @@
 import React from 'react';
-import fishImage from '/images/fish.png';
-import orangeImage from '/images/orange.png';
-import tomatoImage from '/images/tomato.png';
-import strawberryImage from '/images/strawberry.png';
-import bottleCapImage from '/images/bottle cap.png';
-import popTabImage from '/images/pop tab.png';
-import romaTomatoImage from '/images/roma tomato.png';
-import forkImage from '/images/fork.png';
-import knifeImage from '/images/knife.png';
+import fishImage from '@/assets/images/fish.png';
+import orangeImage from '@/assets/images/orange.png';
+import tomatoImage from '@/assets/images/tomato.png';
+import strawberryImage from '@/assets/images/strawberry.png';
+import bottleCapImage from '@/assets/images/bottle cap.png';
+import popTabImage from '@/assets/images/pop tab.png';
+import romaTomatoImage from '@/assets/images/roma tomato.png';
+import forkImage from '@/assets/images/fork.png';
+import knifeImage from '@/assets/images/knife.png';
 
 const decorativeImages = [
   {
