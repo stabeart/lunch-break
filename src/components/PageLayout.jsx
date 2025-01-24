@@ -4,7 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 import TipJar from './TipJar';
 import DecorativeImages from './DecorativeImages';
 import plateImage from '../assets/images/plate.webp';
-import tableclothImage from '../assets/images/tablecloth6.png';
+import tableclothImage from '../assets/images/tablecloth6.jpg';
 import fishImage from '@/assets/images/fish.webp';
 import orangeImage from '@/assets/images/orange.webp';
 import tomatoImage from '@/assets/images/tomato.webp';
