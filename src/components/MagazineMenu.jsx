@@ -1,4 +1,5 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 import PageLayout from './PageLayout';
 
@@ -35,6 +36,8 @@ const SectionTitle = ({ href, children }) => (
 );
 
 const LiteraryMenu = () => {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
   return (
     <PageLayout title="Menu" showMenuLink={false}>
       <div className="text-center">
@@ -61,19 +64,16 @@ const LiteraryMenu = () => {
           </div>
 
           <div className="text-base mt-8">
-            <p className="mb-2">
-              <MenuLink href="/about">about us</MenuLink>
-            </p>
+           <p className="mb-2">
+            <MenuLink href="/about">about us</MenuLink>
+           </p>
+  
+            {isMobile && (
+              <p className="mt-2">
+                <MenuLink href="/donate">donate</MenuLink>
+              </p>
+               )}
           </div>
-
-          // In the main menu section, after about us link
-        {isMobile && (
-          <div className="mt-4">
-            <p className="mb-2">
-              <MenuLink href="/donate">donate</MenuLink>
-            </p>
-          </div>
-        )}
         </div>
       </div>
     </PageLayout>
