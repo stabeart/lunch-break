@@ -10,4 +10,7 @@ export default defineConfig({
     },
   },
   assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg'],
+  define: {
+    'process.env.PAYPAL_CLIENT_ID': JSON.stringify('YOUR_PAYPAL_CLIENT_ID')
+  }
 })

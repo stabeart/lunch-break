@@ -15,6 +15,12 @@ import romaTomatoImage from '@/assets/images/roma tomato.webp';
 import forkImage from '@/assets/images/fork.webp';
 import knifeImage from '@/assets/images/knife.webp';
 
+const MobileHeader = () => (
+  <div className="fixed top-0 left-0 right-0 bg-[#FEFCE8] border-b-4 border-[#4d598b] p-4 text-center z-50">
+    <span className="font-['Perpetua_Titling_MT'] font-bold text-2xl">LUNCHBREAK</span>
+  </div>
+);
+
 const PageLayout = ({ title, children, showMenuLink = true }) => {
   const location = useLocation();
   const showTipJar = location.pathname !== '/donate';
@@ -133,6 +139,8 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
 
   return (
     <div className="relative min-h-screen bg-white">
+            {isMobile && <MobileHeader />}
+
   <div 
   className="fixed inset-0 z-0"
   style={{
@@ -144,7 +152,7 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
   }}
 />
       
-      <div style={styles.fixedTitle} className={isMobile ? 'hidden sm:block' : ''}>
+      <div style={styles.fixedTitle} className={isMobile ? 'hidden' : ''}>
         LUNCHBREAK<br />
         <span style={{ 
           fontWeight: 'normal', 
@@ -172,7 +180,10 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
         />
       </div>
 
-      <div className={`min-h-screen ${isReducedSpacing ? 'p-4' : 'p-8'} flex justify-center items-center relative`} style={{ zIndex: 2 }}>
+      <div className={`min-h-screen ${isReducedSpacing ? 'p-4' : 'p-8'} 
+                      ${isMobile ? 'pt-20' : ''} 
+                      flex justify-center items-center relative`} 
+           style={{ zIndex: 2 }}>
         <div className="max-w-md w-full mx-auto">
           <div 
             className={`${isReducedSpacing ? 'p-8' : 'p-16'} shadow-lg rounded-sm ${
@@ -220,6 +231,17 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
               </div>
             </div>
           </div>
+
+      {isMobile && location.pathname === '/about' && (
+            <div className="mt-8 text-center">
+              <Link 
+                to="/donate" 
+                className="text-lg font-perpetua hover:opacity-70 transition-opacity underline"
+              >
+                Donate
+              </Link>
+            </div>
+          )}
         </div>
       </div>
 
