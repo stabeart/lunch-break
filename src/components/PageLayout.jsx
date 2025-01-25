@@ -16,8 +16,8 @@ import forkImage from '@/assets/images/fork.webp';
 import knifeImage from '@/assets/images/knife.webp';
 
 const MobileHeader = () => (
-  <div className="fixed top-0 left-0 right-0 bg-[#FEFCE8] border-b-4 border-[#4d598b] p-4 text-center z-50">
-    <span className="font-['Perpetua_Titling_MT'] font-bold text-2xl">LUNCHBREAK</span>
+  <div className="fixed top-0 left-0 right-0 bg-white p-2 text-center z-50">
+    <span className="font-['Perpetua_Titling_MT'] font-bold text-xl">LUNCHBREAK <i>review</i></span>
   </div>
 );
 
@@ -231,17 +231,6 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
               </div>
             </div>
           </div>
-
-      {isMobile && location.pathname === '/about' && (
-            <div className="mt-8 text-center">
-              <Link 
-                to="/donate" 
-                className="text-lg font-perpetua hover:opacity-70 transition-opacity underline"
-              >
-                Donate
-              </Link>
-            </div>
-          )}
         </div>
       </div>
 

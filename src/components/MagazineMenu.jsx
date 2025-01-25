@@ -65,6 +65,15 @@ const LiteraryMenu = () => {
               <MenuLink href="/about">about us</MenuLink>
             </p>
           </div>
+
+          // In the main menu section, after about us link
+        {isMobile && (
+          <div className="mt-4">
+            <p className="mb-2">
+              <MenuLink href="/donate">donate</MenuLink>
+            </p>
+          </div>
+        )}
         </div>
       </div>
     </PageLayout>
