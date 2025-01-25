@@ -18,8 +18,8 @@ import knifeImage from '@/assets/images/knife.webp';
 const MobileHeader = () => (
   <div className="fixed top-0 left-0 right-0 bg-white p-2 text-center z-50">
     <span>
-      <span className="font-['Perpetua_Titling_MT'] font-bold text-4xl">LUNCHBREAK </span>
-      <span className="font-['Perpetua'] font-normal italic text-6xl">review</span>
+      <span className="font-['Perpetua_Titling_MT'] font-bold text-3xl">LUNCHBREAK </span>
+      <span className="font-['Perpetua'] font-normal italic text-3xl">review</span>
     </span>
   </div>
  );
