@@ -15,7 +15,12 @@ const Submissions = () => {
               be submitted in a single pdf.
               </p>
               <p>
-              We accept submissions by email at submissions@lunchbreak.com. Our editors are 
+              We accept submissions by email at <a 
+                href="mailto:editors@lunchbreakreview.com"
+                className="hover:opacity-30 transition-opacity underline"
+              >
+                editors@lunchbreakreview.com
+              </a>. Our editors are 
               happy to provide feedback on submissions. Please let us know whether you would like feedback with your 
               submission.
             </p>
