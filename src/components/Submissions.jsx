@@ -11,7 +11,7 @@ const Submissions = () => {
             <p className="mb-2">
               Our submissions are open to anyone and everyone. We accept poetry and fiction, as well as essays on 
               literary themes. You may submit up to five poems. Prose can be any length, although an excerpt of up to 
-              1000 words should be underlined as the section you would most prefer to be published. Submissions should 
+              1000 words should be underlined as the section you would most prefer to be published. Multiple poems should 
               be submitted in a single pdf.
               </p>
               <p>
