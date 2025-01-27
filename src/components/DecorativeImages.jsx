@@ -16,23 +16,19 @@ const decorativeImages = [
     alt: "Bottle Cap",
     name: "bottleCap",
     style: {
-      position: 'fixed',
-      top: '5%',
-      left: '5%', 
-      width: '8%',
-      maxWidth: '128px'
+      width: '110px',
+      left: '50px',
+      top: '20px'
     }
   },
   {
     src: fishImage,
     alt: "Fish",
-    name: "fish", 
+    name: "fish",
     style: {
-      position: 'fixed',
-      top: '15%',
-      right: '70%',
-      width: '20%',
-      maxWidth: '350px',
+      width: '355px',
+      left: '115px',
+      top: '90px',
       zIndex: 2
     }
   },
@@ -41,11 +37,9 @@ const decorativeImages = [
     alt: "Orange",
     name: "orange",
     style: {
-      position: 'fixed', 
-      top: '20%',
-      right: '2%',
-      width: '12%',
-      maxWidth: '215px'
+      width: '200px',
+      right: '25px',
+      top: '150px'
     }
   },
   {
@@ -53,11 +47,9 @@ const decorativeImages = [
     alt: "Pop Tab",
     name: "popTab",
     style: {
-      position: 'fixed',
-      top: '80%',
-      right: '25%', 
-      width: '5%',
-      maxWidth: '80px'
+      width: '65px',
+      right: '365px',
+      bottom: '65px'
     }
   },
   {
@@ -65,23 +57,19 @@ const decorativeImages = [
     alt: "Roma Tomato",
     name: "romaTomato",
     style: {
-      position: 'fixed',
-      top: '40%',
-      left: '7%',
-      width: '8%',
-      maxWidth: '125px'
+      width: '170px',
+      left: '70px',
+      bottom: '320px'
     }
   },
   {
-    src: tomatoImage, 
+    src: tomatoImage,
     alt: "Tomato",
     name: "tomato",
     style: {
-      position: 'fixed',
-      top: '65%',
-      left: '2%',  
-      width: '12%',
-      maxWidth: '250px'
+      width: '220px',
+      left: '35px',
+      bottom: '45px'
     }
   },
   {
@@ -89,37 +77,31 @@ const decorativeImages = [
     alt: "Strawberry",
     name: "strawberry",
     style: {
-      position: 'fixed',
-      top: '80%',
-      right: '7%',
-      width: '7%',
-      maxWidth: '96px' 
+      width: '120px',
+      right: '100px',
+      bottom: '1px'
     }
   },
   {
     src: forkImage,
-    alt: "Fork",  
+    alt: "Fork",
     name: "fork",
-    style: { 
-      position: 'fixed',
+    style: {
+      width: '90px',
+      left: '269px',
       top: '50%',
-      left: '18.5%',
-      width: '25%',
-      maxWidth: '85px',
       transform: 'translateY(-50%)',
       zIndex: 1
     }
   },
-  {  
+  {
     src: knifeImage,
     alt: "Knife",
     name: "knife",
     style: {
-      position: 'fixed', 
+      width: '90px',
+      right: '260px',
       top: '50%',
-      right: '18.5%',  
-      width: '25%',
-      maxWidth: '85px',
       transform: 'translateY(-50%)'
     }
   }
@@ -131,22 +113,33 @@ const DecorativeImages = ({ visibleImages = [] }) => {
   if (isMobile) return null;
 
   return (
-    <>
+    <div 
+      className="absolute inset-0"
+      style={{
+        width: '1500px',
+        height: '800px',
+        left: '50%',
+        top: '50%',
+        transform: 'translate(-50%, -50%)',
+        position: 'fixed'
+      }}
+    >
       {decorativeImages.map((image, index) => (
         <img
-          key={index}  
+          key={index}
           src={image.src}
           alt={image.alt}
-          className={`pointer-events-none transition-transform duration-300 hover:rotate-6 ${
-            visibleImages.includes(image.name) ? 'block' : 'hidden'  
+          className={`absolute pointer-events-none transition-transform duration-300 hover:rotate-6 ${
+            visibleImages.includes(image.name) ? 'block' : 'hidden'
           }`}
           style={{
             ...image.style,
-            objectFit: 'contain'
+            objectFit: 'contain',
+            position: 'absolute'
           }}
         />
       ))}
-    </>
+    </div>
   );
 };
 
