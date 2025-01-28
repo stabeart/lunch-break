@@ -180,7 +180,7 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
         <span style={{ 
           fontWeight: 'normal', 
           fontStyle: 'italic', 
-          fontSize: isMobile ? '3rem' : `${6 * scale}rem`
+          fontSize: isMobile ? '3rem' : isSmallScreen ? '4rem' : `${6 * scale}rem`
         }}>review</span>
       </div>
       
