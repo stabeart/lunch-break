@@ -101,10 +101,10 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
     },
     fixedTitle: {
       position: 'fixed',
-      top: isMobile ? '0.5rem' : '1.5rem',
-      right: isMobile ? '1rem' : '2rem',
+      top: isMobile ? '0.5rem' : isSmallScreen ? '1rem' : `${1.5 * scale}rem`,
+      right: isMobile ? '1rem' : isSmallScreen ? '1.5rem' : `${2 * scale}rem`,
       fontFamily: 'Perpetua Titling MT Bold, Perpetua, serif',
-      fontSize: isMobile ? '2.5rem' : `${4.5 * scale}rem`,
+      fontSize: isMobile ? '2rem' : isSmallScreen ? '3rem' : `${4.5 * scale}rem`,
       fontWeight: 'bold',
       color: '#000000',
       letterSpacing: '0em',
@@ -113,7 +113,7 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
       pointerEvents: 'none',
       lineHeight: '.55',
       textAlign: 'right',
-      transform: isSmallScreen ? `scale(${0.8})` : 'none', // Scale down on small screens
+      transform: isSmallScreen ? 'scale(0.7)' : 'none',
       transformOrigin: 'top right',
     }
   };
