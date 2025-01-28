@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import TipJar from './TipJar';
@@ -29,6 +29,24 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
   const showTipJar = location.pathname !== '/donate';
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isReducedSpacing = ['/submissions', '/about', '/donate'].includes(location.pathname);
+  const isSmallScreen = useMediaQuery({ maxWidth: 1366 }); // Add this line
+  const [viewportWidth, setViewportWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1440);
+
+  // Update viewport width on resize
+  useEffect(() => {
+    const handleResize = () => setViewportWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Calculate scale based on viewport width
+  const getScale = () => {
+    if (viewportWidth >= 1440) return 1;
+    if (viewportWidth <= 768) return 0.6;
+    return 0.6 + (viewportWidth - 768) * (0.4 / (1440 - 768));
+  };
+
+  const scale = getScale();
 
   const styles = {
     georgia: {
@@ -86,7 +104,7 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
       top: isMobile ? '0.5rem' : '1.5rem',
       right: isMobile ? '1rem' : '2rem',
       fontFamily: 'Perpetua Titling MT Bold, Perpetua, serif',
-      fontSize: isMobile ? '2.5rem' : '4.5rem',
+      fontSize: isMobile ? '2.5rem' : `${4.5 * scale}rem`,
       fontWeight: 'bold',
       color: '#000000',
       letterSpacing: '0em',
@@ -94,7 +112,9 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
       textShadow: '1px 1px 0px rgba(255, 255, 255, 0.5)',
       pointerEvents: 'none',
       lineHeight: '.55',
-      textAlign: 'right'
+      textAlign: 'right',
+      transform: isSmallScreen ? `scale(${0.8})` : 'none', // Scale down on small screens
+      transformOrigin: 'top right',
     }
   };
 
@@ -160,7 +180,7 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
         <span style={{ 
           fontWeight: 'normal', 
           fontStyle: 'italic', 
-          fontSize: isMobile ? '3rem' : '6rem' 
+          fontSize: isMobile ? '3rem' : `${6 * scale}rem`
         }}>review</span>
       </div>
       
