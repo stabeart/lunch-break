@@ -14,8 +14,20 @@ const DonatePage = () => {
 
           <div className="space-y-6">
             <div className="flex flex-col items-center gap-4">
+              <a
+                href="https://pay.lunchbreakreview.com"
+                className="px-8 py-3 bg-[#2E6F40] text-white rounded-md hover:bg-opacity-90 transition-opacity w-full max-w-xs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Our Pay Link
+              </a>
+              <p classname="mb-6 text-xl">
+                Or
+              </p>
+              
               <a 
-                href="https://paypal.me/YourPayPalUsername"
+                href="https://paypal.me/lunchbreakrvw"
                 className="px-8 py-3 bg-[#0070BA] text-white rounded-md hover:bg-opacity-90 transition-opacity w-full max-w-xs"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -24,7 +36,7 @@ const DonatePage = () => {
               </a>
               
               <a 
-                href="https://venmo.com/YourVenmoUsername"
+                href="https://venmo.com/lunchbreakreview"
                 className="px-8 py-3 bg-[#008CFF] text-white rounded-md hover:bg-opacity-90 transition-opacity w-full max-w-xs"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -32,14 +44,6 @@ const DonatePage = () => {
                 Donate via Venmo
               </a>
               
-              <a 
-                href="https://cash.app/$YourCashAppUsername"
-                className="px-8 py-3 bg-[#00D632] text-white rounded-md hover:bg-opacity-90 transition-opacity w-full max-w-xs"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Donate via Cash App
-              </a>
             </div>
           </div>
         </div>
