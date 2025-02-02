@@ -16,10 +16,10 @@ const Submissions = () => {
               </p>
               <p>
               We accept submissions by email at <a 
-                href="mailto:editors@lunchbreakreview.com"
+                href="mailto:submissions@lunchbreakreview.com"
                 className="hover:opacity-30 transition-opacity underline"
               >
-                editors@lunchbreakreview.com
+                submissions@lunchbreakreview.com
               </a>. Our editors are 
               happy to provide feedback on submissions. Please let us know whether you would like feedback with your 
               submission.

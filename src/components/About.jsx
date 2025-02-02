@@ -29,7 +29,12 @@ const About = () => {
                 className="hover:opacity-30 transition-opacity underline"
               >
                 editors@lunchbreakreview.com
-              </a></p>
+              </a> <br></br>
+              <a
+                href="https://www.instagram.com/lunchbreak_review/"
+                className="hover:opacity-30 transition-opacity underline"
+              >
+                Instagram Account  </a></p>
           </div>
         </div>
       </div>
