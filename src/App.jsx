@@ -7,6 +7,7 @@ import Submissions from './components/Submissions';
 import CurrentIssue from './components/CurrentIssue';
 import PastIssues from './components/PastIssues';
 import Specials from './components/Specials';
+import Weekly from './components/Weekly';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/current" element={<CurrentIssue />} />
           <Route path="/past" element={<PastIssues />} />
           <Route path="/specials" element={<Specials />} />
+          <Route path="/weekly" element={<Weekly />} />
         </Routes>
       </BrowserRouter>
     </div>

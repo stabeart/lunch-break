@@ -42,9 +42,10 @@ const LiteraryMenu = () => {
     <PageLayout title="Menu" showMenuLink={false}>
       <div className="text-center">
         <div className="space-y-12 text-center">
-          <div>
+        <div>
             <SectionTitle href="/specials">specials</SectionTitle>
           </div>
+
 
           <div>
             <h2 className="text-2xl mb-4" style={styles.georgia}>main courses</h2>
