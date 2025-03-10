@@ -29,12 +29,6 @@ const MenuLink = ({ href, children, className, useGeorgia, isSpecial }) => (
   </Link>
 );
 
-const SectionTitle = ({ href, children }) => (
-  <h2 className="text-2xl mb-4" style={styles.sectionTitle}>
-    <MenuLink href={href} isSpecial>{children}</MenuLink>
-  </h2>
-);
-
 const LiteraryMenu = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
@@ -42,10 +36,17 @@ const LiteraryMenu = () => {
     <PageLayout title="Menu" showMenuLink={false}>
       <div className="text-center">
         <div className="space-y-12 text-center">
-        <div>
-            <SectionTitle href="/specials">specials</SectionTitle>
+          <div>
+            <h2 className="text-2xl mb-4" style={styles.sectionTitle}>
+              specials
+            </h2>
+            <p className="mb-2">
+              <MenuLink href="/weekly">weekly feature</MenuLink>
+            </p>
+            <p className="mb-2">
+              <MenuLink href="/archive">archive</MenuLink>
+            </p>
           </div>
-
 
           <div>
             <h2 className="text-2xl mb-4" style={styles.georgia}>main courses</h2>
@@ -65,15 +66,14 @@ const LiteraryMenu = () => {
           </div>
 
           <div className="text-base mt-8">
-           <p className="mb-2">
-            <MenuLink href="/about">about us</MenuLink>
-           </p>
-  
+            <p className="mb-2">
+              <MenuLink href="/about">about us</MenuLink>
+            </p>
             {isMobile && (
               <p className="mt-2">
                 <MenuLink href="/donate">donate</MenuLink>
               </p>
-               )}
+            )}
           </div>
         </div>
       </div>

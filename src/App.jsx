@@ -7,7 +7,10 @@ import Submissions from './components/Submissions';
 import CurrentIssue from './components/CurrentIssue';
 import PastIssues from './components/PastIssues';
 import Specials from './components/Specials';
-import Weekly from './components/Weekly';
+import WeeklySpecials from './components/WeeklySpecials';
+import Archive from './components/Archive';
+import ArchivePiece from './components/ArchivePiece';
+import ProseSpecials from './components/ProseSpecials';
 
 function App() {
   return (
@@ -20,8 +23,11 @@ function App() {
           <Route path="/submissions" element={<Submissions />} />
           <Route path="/current" element={<CurrentIssue />} />
           <Route path="/past" element={<PastIssues />} />
-          <Route path="/specials" element={<Specials />} />
-          <Route path="/weekly" element={<Weekly />} />
+          <Route path="/specials" element={<WeeklySpecials />} /> {/* Redirecting /specials to WeeklySpecials */}
+          <Route path="/weekly" element={<WeeklySpecials />} />
+          <Route path="/weekly/prose" element={<ProseSpecials />} />
+          <Route path="/archive" element={<Archive />} />
+          <Route path="/archive/:id" element={<ArchivePiece />} />
         </Routes>
       </BrowserRouter>
     </div>

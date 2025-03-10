@@ -5,15 +5,6 @@ import TipJar from './TipJar';
 import DecorativeImages from './DecorativeImages';
 import plateImage from '../assets/images/plate.webp';
 import tableclothImage from '../assets/images/tablecloth6.jpg';
-import fishImage from '@/assets/images/fish.webp';
-import orangeImage from '@/assets/images/orange.webp';
-import tomatoImage from '@/assets/images/tomato.webp';
-import strawberryImage from '@/assets/images/strawberry.webp';
-import bottleCapImage from '@/assets/images/bottle cap.webp';
-import popTabImage from '@/assets/images/pop tab.webp';
-import romaTomatoImage from '@/assets/images/roma tomato.webp';
-import forkImage from '@/assets/images/fork.webp';
-import knifeImage from '@/assets/images/knife.webp';
 
 const MobileHeader = () => (
   <div className="fixed top-0 left-0 right-0 bg-white p-2 text-center z-50">
@@ -22,14 +13,20 @@ const MobileHeader = () => (
       <span className="font-['Perpetua'] font-normal italic text-3xl">review</span>
     </span>
   </div>
- );
+);
 
-const PageLayout = ({ title, children, showMenuLink = true }) => {
+const PageLayout = ({ 
+  title, 
+  children, 
+  showMenuLink = true, 
+  contentSize = 'default', // Options: 'default', 'wide', 'full'
+  showDecorativeImages = true
+}) => {
   const location = useLocation();
   const showTipJar = location.pathname !== '/donate';
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isReducedSpacing = ['/submissions', '/about', '/donate'].includes(location.pathname);
-  const isSmallScreen = useMediaQuery({ maxWidth: 1366 }); // Add this line
+  const isSmallScreen = useMediaQuery({ maxWidth: 1366 });
   const [viewportWidth, setViewportWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1440);
 
   // Update viewport width on resize
@@ -104,7 +101,7 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
       top: isMobile ? '0.5rem' : isSmallScreen ? '.5rem' : `${1.5 * scale}rem`,
       right: isMobile ? '1rem' : isSmallScreen ? '1rem' : `${2 * scale}rem`,
       fontFamily: 'Perpetua Titling MT Bold, Perpetua, serif',
-      fontSize: isMobile ? '2rem' : isSmallScreen ? '2rem' : `${4.5 * scale}rem`,
+      fontSize: isMobile ? '2rem' : isSmallScreen ? '2rem' : contentSize === 'wide' ? '4rem' : contentSize === 'full' ? '3rem' : `${4.5 * scale}rem`,
       fontWeight: 'bold',
       color: '#000000',
       letterSpacing: '0em',
@@ -113,24 +110,38 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
       pointerEvents: 'none',
       lineHeight: '.55',
       textAlign: 'right',
-      transform: isSmallScreen ? 'scale(0.5)' : 'none',
+      transform: isSmallScreen ? 'scale(0.5)' : contentSize === 'full' ? 'scale(0.65)' : 'none',
       transformOrigin: 'top right',
+    }
+  };
+
+  // Determine content width based on size prop
+  const getContentWidth = () => {
+    switch (contentSize) {
+      case 'wide':
+        return 'max-w-xl'; // Approximately 672px
+      case 'full':
+        return 'max-w-4xl'; // Approximately 896px
+      default:
+        return 'max-w-md'; // Default is approximately 448px
+    }
+  };
+
+  // Determine padding based on content size
+  const getContentPadding = () => {
+    switch (contentSize) {
+      case 'wide':
+      case 'full':
+        return isReducedSpacing ? 'p-6' : 'p-10';
+      default:
+        return isReducedSpacing ? 'p-8' : 'p-16';
     }
   };
 
   useEffect(() => {
     const images = [
       plateImage,
-      tableclothImage,
-      fishImage,
-      orangeImage,
-      tomatoImage,
-      strawberryImage,
-      bottleCapImage,
-      popTabImage,
-      romaTomatoImage,
-      forkImage,
-      knifeImage
+      tableclothImage
     ];
  
     images.forEach(image => {
@@ -142,6 +153,17 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
     });
   }, []);
 
+  // Determine which decorative images to show based on content size
+  const getVisibleImages = () => {
+    if (contentSize === 'default') {
+      return ['fork', 'knife', 'fish', 'orange', 'pepper', 'popTab', 'romaTomato', 'strawberry', 'tomato', 'bottleCap'];
+    } else if (contentSize === 'wide') {
+      return ['fork', 'knife', 'fish', 'orange', 'pepper', 'popTab', 'romaTomato', 'strawberry', 'tomato', 'bottleCap']; // Selected images for wide layout
+    } else {
+      return []; // No images for full layout
+    }
+  };
+  
   const processChildren = (child) => {
     if (!React.isValidElement(child)) return child;
 
@@ -162,54 +184,57 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
 
   return (
     <div className="relative min-h-screen bg-white">
-            {isMobile && <MobileHeader />}
+      {isMobile && <MobileHeader />}
 
-  <div 
-  className="fixed inset-0 z-0"
-  style={{
-    backgroundImage: `url(${tableclothImage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    opacity: .45
-  }}
-/>
+      <div 
+        className="fixed inset-0 z-0"
+        style={{
+          backgroundImage: `url(${tableclothImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: .45
+        }}
+      />
       
       <div style={styles.fixedTitle} className={isMobile ? 'hidden' : ''}>
         LUNCHBREAK<br />
         <span style={{ 
           fontWeight: 'normal', 
           fontStyle: 'italic', 
-          fontSize: isMobile ? '3rem' : isSmallScreen ? '4rem' : `${6 * scale}rem`
+          fontSize: isMobile ? '3rem' : isSmallScreen ? '4rem' : contentSize === 'wide' ? '5rem' : contentSize === 'full' ? '4rem' : `${6 * scale}rem`
         }}>review</span>
       </div>
       
-      <div 
-        className="fixed inset-0 pointer-events-none"
-        style={{
-          zIndex: 1,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}
-      >
-        <img 
-          src={plateImage}
-          alt=""
-          className={`object-contain opacity-90 ${isMobile ? 'w-[400px] h-[400px]' : 'w-[700px] h-[700px]'}`}
+      {/* Plate background - only show for default content */}
+      {contentSize !== 'full' && (
+        <div 
+          className="fixed inset-0 pointer-events-none"
           style={{
-            filter: 'brightness(1.2)'
+            zIndex: 1,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
           }}
-        />
-      </div>
+        >
+          <img 
+            src={plateImage}
+            alt=""
+            className={`object-contain opacity-90 ${isMobile ? 'w-[400px] h-[400px]' : 'w-[700px] h-[700px]'}`}
+            style={{
+              filter: 'brightness(1.2)'
+            }}
+          />
+        </div>
+      )}
 
       <div className={`min-h-screen ${isReducedSpacing ? 'p-4' : 'p-8'} 
                       ${isMobile ? 'pt-20' : ''} 
                       flex justify-center items-center relative`} 
            style={{ zIndex: 2 }}>
-        <div className="max-w-md w-full mx-auto">
+        <div className={`w-full ${getContentWidth()} mx-auto`}>
           <div 
-            className={`${isReducedSpacing ? 'p-8' : 'p-16'} shadow-lg rounded-sm ${
+            className={`${getContentPadding()} shadow-lg rounded-sm ${
               location.pathname === '/' ? 'transform transition-transform duration-300 hover:scale-[1.02]' : ''
             }`}
             style={{ 
@@ -241,11 +266,11 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
                 >
                   {title}
                 </h1>
-                <div className={`text-[000000] ${isMobile ? 'text-base' : 'text-lg'}`}>
+                <div className={`text-[000000] ${isMobile ? 'text-base' : contentSize !== 'default' ? 'text-base' : 'text-lg'}`}>
                   {React.Children.map(children, child => {
                     if (React.isValidElement(child) && child.type === 'p') {
                       return React.cloneElement(child, {
-                        className: `${child.props.className || ''} text-lg`
+                        className: `${child.props.className || ''} ${contentSize !== 'default' ? 'text-base' : 'text-lg'}`
                       });
                     }
                     return processChildren(child);
@@ -257,11 +282,17 @@ const PageLayout = ({ title, children, showMenuLink = true }) => {
         </div>
       </div>
 
-      {showTipJar && !isMobile && <TipJar />}
+      {/* Show tip jar for default and wide content, but not full width */}
+      {showTipJar && !isMobile && contentSize !== 'full' && (
+        <TipJar position={contentSize === 'wide' ? 'far-right' : 'default'} />
+      )}
       
-      <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 2 }}>
-        <DecorativeImages visibleImages={['fork', 'knife', 'fish', 'orange', 'pepper', 'popTab', 'romaTomato', 'strawberry', 'tomato', 'bottleCap']} />
-      </div>
+      {/* Only show decorative images if requested */}
+      {showDecorativeImages && (
+        <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 2 }}>
+          <DecorativeImages visibleImages={getVisibleImages()} />
+        </div>
+      )}
     </div>
   );
 };
