@@ -43,9 +43,7 @@ const LiteraryMenu = () => {
             <p className="mb-2">
               <MenuLink href="/weekly">weekly feature</MenuLink>
             </p>
-            <p className="mb-2">
-              <MenuLink href="/archive">archive</MenuLink>
-            </p>
+
           </div>
 
           <div>
