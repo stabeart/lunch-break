@@ -11,7 +11,7 @@
     "@fontsource/dancing-script": "^5.1.1",
     "@fontsource/playfair-display": "^5.1.1",
     "@paypal/react-paypal-js": "^8.8.1",
-    "@vercel/analytics": "^1.4.1",
+    "@vercel/analytics": "^1.5.0",
     "axios": "^1.8.2",
     "path": "^0.12.7",
     "react": "^18.3.1",

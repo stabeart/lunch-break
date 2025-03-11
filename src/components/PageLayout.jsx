@@ -121,7 +121,7 @@ const PageLayout = ({
       case 'wide':
         return 'max-w-xl'; // Approximately 672px
       case 'full':
-        return 'max-w-4xl'; // Approximately 896px
+        return 'max-w-5xl'; // Increasing to approximately 1024px for full content
       default:
         return 'max-w-md'; // Default is approximately 448px
     }
@@ -131,11 +131,25 @@ const PageLayout = ({
   const getContentPadding = () => {
     switch (contentSize) {
       case 'wide':
-      case 'full':
         return isReducedSpacing ? 'p-6' : 'p-10';
+      case 'full':
+        return isReducedSpacing ? 'p-6 px-8' : 'p-12 px-16'; // Increased horizontal padding for full
       default:
         return isReducedSpacing ? 'p-8' : 'p-16';
     }
+  };
+
+  // Custom paragraph spacing for full content
+  const getContentStyle = () => {
+    if (contentSize === 'full') {
+      return {
+        '& p': {
+          marginBottom: '2rem', // Increased paragraph spacing for full content
+          lineHeight: '2'       // Increased line height for readability
+        }
+      };
+    }
+    return {};
   };
 
   useEffect(() => {
@@ -164,6 +178,7 @@ const PageLayout = ({
     }
   };
   
+  // Process children components, applying appropriate styles
   const processChildren = (child) => {
     if (!React.isValidElement(child)) return child;
 
@@ -171,6 +186,13 @@ const PageLayout = ({
       return React.cloneElement(child, {
         style: { ...child.props.style, ...styles.subHeading },
         className: `${child.props.className || ''} text-2xl mb-4`
+      });
+    }
+
+    // Special handling for paragraphs in full content mode
+    if (contentSize === 'full' && child.type === 'p') {
+      return React.cloneElement(child, {
+        className: `${child.props.className || ''} mb-6 leading-relaxed`
       });
     }
 
@@ -206,7 +228,7 @@ const PageLayout = ({
         }}>review</span>
       </div>
       
-      {/* Plate background - only show for default content */}
+      {/* Plate background - only show for default and wide content */}
       {contentSize !== 'full' && (
         <div 
           className="fixed inset-0 pointer-events-none"
@@ -261,16 +283,26 @@ const PageLayout = ({
               
               <div className="text-center">
                 <h1 
-                  className={`${isReducedSpacing ? 'mb-6' : 'mb-12'}`}
+                  className={`${isReducedSpacing ? 'mb-6' : contentSize === 'full' ? 'mb-8' : 'mb-12'}`}
                   style={styles.mainHeading}
                 >
                   {title}
                 </h1>
-                <div className={`text-[000000] ${isMobile ? 'text-base' : contentSize !== 'default' ? 'text-base' : 'text-lg'}`}>
+                <div 
+                  className={`text-[000000] ${
+                    isMobile 
+                      ? 'text-base' 
+                      : contentSize === 'full' 
+                        ? 'text-base leading-relaxed' 
+                        : 'text-lg'
+                  }`}
+                  style={getContentStyle()}
+                >
                   {React.Children.map(children, child => {
-                    if (React.isValidElement(child) && child.type === 'p') {
+                    // For direct paragraphs in full content mode
+                    if (React.isValidElement(child) && child.type === 'p' && contentSize === 'full') {
                       return React.cloneElement(child, {
-                        className: `${child.props.className || ''} ${contentSize !== 'default' ? 'text-base' : 'text-lg'}`
+                        className: `${child.props.className || ''} mb-6 leading-relaxed`
                       });
                     }
                     return processChildren(child);

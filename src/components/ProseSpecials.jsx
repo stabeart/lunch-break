@@ -19,8 +19,9 @@ const ProseSpecials = () => {
     return null; // Will redirect via useEffect
   }
 
-  // Split the content into paragraphs
-  const paragraphs = featuredPiece.content.trim().split('\n\n');
+  // Split the content into paragraphs using a more robust regex
+  // This will handle different line ending types and multiple spaces
+  const paragraphs = featuredPiece.content.trim().split(/\n\s*\n/);
 
   return (
     <PageLayout 
@@ -28,13 +29,13 @@ const ProseSpecials = () => {
       contentSize="full"
       showDecorativeImages={false}
     >
-      <div className="text-center mb-8">
+      <div className="text-center mb-10">
         <h2 className="text-2xl mb-1">{featuredPiece.title}</h2>
         <p className="mb-6 text-lg italic">by {featuredPiece.author}</p>
         <p className="mb-8 text-sm">{featuredPiece.date}</p>
       </div>
       
-      <div className="text-left max-w-prose mx-auto">
+      <div className="text-left mx-auto prose prose-lg">
         {paragraphs.map((paragraph, index) => (
           <p key={index} className="mb-6 text-base leading-relaxed">
             {paragraph.trim()}
@@ -42,9 +43,9 @@ const ProseSpecials = () => {
         ))}
       </div>
       
-      <div className="mt-12 mb-8 border-t border-gray-200 pt-8 text-left max-w-prose mx-auto">
-        <h3 className="text-xl mb-3">About the Author</h3>
-        <p className="text-base leading-relaxed mb-2">{featuredPiece.authorBio}</p>
+      <div className="mt-16 mb-8 border-t border-gray-200 pt-8 text-left mx-auto">
+        <h3 className="text-xl mb-4">About the Author</h3>
+        <p className="text-base leading-relaxed mb-4">{featuredPiece.authorBio}</p>
         {featuredPiece.authorWebsite && (
           <p className="text-sm mt-4">
             <a 
@@ -59,7 +60,7 @@ const ProseSpecials = () => {
         )}
       </div>
       
-      <div className="mt-8 text-center">
+      <div className="mt-12 text-center">
         <Link 
           to="/archive" 
           className="text-lg hover:opacity-30 transition-opacity underline"

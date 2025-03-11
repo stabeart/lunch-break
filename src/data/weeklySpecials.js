@@ -32,8 +32,6 @@ export const weeklySpecials = [
   in the third decade of the 21st century,
   and chewed.`
     },
-  
-    // Add more weekly specials as needed
   ];
   
   // Helper function to get the current special

@@ -31,7 +31,7 @@ const ArchivePiece = () => {
       // For poetry, preserve line breaks
       const contentLines = piece.content.trim().split('\n');
       return (
-        <div className="text-left max-w-prose mx-auto">
+        <div className="text-left mx-auto">
           {contentLines.map((line, index) => (
             <p key={index} className={`mb-2 ${line.trim() === "" ? "mb-6" : ""}`}>
               {line.trim() === "" ? <br /> : line}
@@ -40,10 +40,10 @@ const ArchivePiece = () => {
         </div>
       );
     } else {
-      // For prose, split into paragraphs
-      const paragraphs = piece.content.trim().split('\n\n');
+      // For prose, split into paragraphs with more robust regex
+      const paragraphs = piece.content.trim().split(/\n\s*\n/);
       return (
-        <div className="text-left max-w-prose mx-auto">
+        <div className="text-left mx-auto prose prose-lg">
           {paragraphs.map((paragraph, index) => (
             <p key={index} className="mb-6 text-base leading-relaxed">
               {paragraph.trim()}
@@ -64,7 +64,7 @@ const ArchivePiece = () => {
       contentSize={contentSize}
       showDecorativeImages={showDecorativeImages}
     >
-      <div className="text-center mb-8">
+      <div className="text-center mb-10">
         <h2 className="text-2xl mb-1">{piece.title}</h2>
         <p className="mb-6 text-lg italic">by {piece.author}</p>
         <p className="mb-8 text-sm">{piece.date}</p>
@@ -72,9 +72,9 @@ const ArchivePiece = () => {
       
       {renderContent()}
       
-      <div className="mt-12 mb-8 border-t border-gray-200 pt-8 text-left max-w-prose mx-auto">
-        <h3 className="text-xl mb-3">About the Author</h3>
-        <p className="text-base leading-relaxed mb-2">{piece.authorBio}</p>
+      <div className="mt-16 mb-8 border-t border-gray-200 pt-8 text-left mx-auto">
+        <h3 className="text-xl mb-4">About the Author</h3>
+        <p className="text-base leading-relaxed mb-4">{piece.authorBio}</p>
         {piece.authorWebsite && (
           <p className="text-sm mt-4">
             <a 
@@ -89,7 +89,7 @@ const ArchivePiece = () => {
         )}
       </div>
       
-      <div className="mt-8 text-center">
+      <div className="mt-12 text-center">
         <Link 
           to="/archive" 
           className="text-lg hover:opacity-30 transition-opacity underline mr-6"
