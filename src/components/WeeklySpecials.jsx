@@ -34,9 +34,13 @@ const WeeklySpecials = () => {
         <p className="mb-8 text-sm">{featuredPiece.date}</p>
       </div>
       
-      <div className="text-left max-w-prose mx-auto">
+      <div className="text-left max-w-prose mx-auto" style={{ 
+        fontFamily: 'Garamond, Georgia, serif',
+        fontSize: '1.125rem',
+        lineHeight: '1.75'
+      }}>
         {contentLines.map((line, index) => (
-          <p key={index} className={`mb-2 ${line.trim() === "" ? "mb-6" : ""}`}>
+          <p key={index} className={`mb-3 ${line.trim() === "" ? "mb-8" : ""}`}>
             {line.trim() === "" ? <br /> : line}
           </p>
         ))}

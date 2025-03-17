@@ -8,7 +8,7 @@ export const weeklySpecials = [
       authorWebsite: "http://paulhostovsky.com",
       date: "March 10, 2025",
       type: "poetry", // This helps determine the layout
-      isCurrent: true, // Only one should be true at a time
+      isCurrent: false, // Only one should be true at a time
       content: `All we had to worry about
   was where to have lunch. We had
   time, money, health, happiness. The pursuit
@@ -31,6 +31,45 @@ export const weeklySpecials = [
   of a fine restaurant in a glass city in summer
   in the third decade of the 21st century,
   and chewed.`
+    },
+    {
+      id: "2025-3-17",
+      title: "An Unplanned Interment",
+      author: "Spencer Keene",
+      authorBio: "Spencer Keene (he/him) is a writer and lawyer from Vancouver, BC. His poetry and short fiction have appeared in a variety of print and digital publication, including SAD Magazine, Sea to Sky Review, Star*Line Magazine, Across the Margin, and Candlelit Chronicles.",
+      authorWebsite: "www.spencerkeene.ca",
+      date: "March 17, 2025",
+      type: "prose",
+      isCurrent: true,
+      content:`The heavy urn jostled against the seatbelt as Andrew backed out of the parking stall reserved for veterinarian clients. He’d prepared for this moment in all the ways they tell you to; fill your pet’s final day with their favourite activities, bring their most cherished toys to the appointment, write down what you want to say as the sedatives take hold. What they fail to mention is that, once your pet is gone, that bone-shaped chew toy they were listlessly gnawing in their final moments becomes a talisman of despair. That the words on that tear-stained scrap of paper in your pocket leave a painful, unerasable imprint on your heart. Would he ever emerge from this abyss of grief?
+      
+      Andrew shifted into drive and navigated to the exit of the plaza’s parking lot. He was terrified by the feelings roiling inside of him. As a clinical counsellor, he was accustomed to putting aside his own thoughts and concerns to make room for the heaps of empathy his job required. This was like stepping behind the curtain; sitting on the other side of the desk, so to speak.
+
+      He turned right onto a thoroughfare and drove towards home. His eyes welled with tears and the road blurred to an amalgam of greys, yellows, and whites. Images of Jessie, his trusty brown lab, flashed through his mind. Her goofy smile, her pink tongue drooping from the side of her jowl. Her sleek body curled into a tight knot on her bed after a long day at the beach. With her love of the water, Andrew had always assumed she’d been a fish in a previous life.
+      
+      He made another right turn onto a quiet, tree-lined avenue. He decided to take the long way home, a last-ditch effort to delay the inevitable. Right now, in his back yard, was a gaping hole in the flower bed lining the east side of his property. A mound of fresh soil was piled next to it, a shovel laying prone on the lawn. The mosaic headstone his mother had made leaned against a wooden banister by the deck.
+
+Jessie had been a free spirit, wild and untameable. Suddenly, the burial plan felt all wrong. Cloistering her within the confines of his back yard for the rest of eternity felt ruthless and inappropriate. Why had he ever even considered it?
+
+His mind careened off in a hundred directions as the panic set in. Without consciously deciding to, he turned onto the oceanfront boulevard, joining the procession of vehicles meandering down the road. The sun hung low in the summer sky, its orange glow spayed across the surface of the sea. Andrew started to relax a little as he took in the scene.
+
+He jolted forward to a grinding crunch, his chest slamming into the steering wheel. The urn launched out of its seatbelt and off the passenger seat. Its ceramic body smashed into the dash, shattering to bits. The plastic baggie holding Jessie’s ashes landed in the dirty footwell, flecks of grey coating the carpet.
+
+Andrew looked ahead at the burly man stepping out of the vehicle he’d just rear-ended. He was completely stunned, his hands glued to the steering wheel. The man approached the driver’s side window, fuming.
+
+“What the hell, buddy!” he shouted, waving his arms in the air.
+
+Andrew rolled down his window. “I… I’m so sorry… my dog died,” he said, bursting into uncontrollable sobs.
+
+The man lowered his hands, his face softening. “Well, I’m sorry to hear that. But you gotta be more careful.”
+
+Andrew gave the man his business card and his insurance information, then pulled off into one of the angled parking stalls lining the promenade. He looked down in dismay at the mess on the floor of his car. Miraculously, most of the ashes had stayed in the baggie, but the urn was unsalvageable.
+
+He bent down and brushed some of the escaped ash back into the baggie. Gripping it carefully, he sat up and opened the driver’s side door. He stepped out of the car, slamming the door shut with his foot. He crossed the promenade and hopped down onto the beach, cradling the baggie in both hands. Hot sand filled the spaces between the toes of his sandaled feet.
+
+As he reached the shoreline, he heaved a great sigh and upended the baggie. The ashes fell anticlimactically into the water, settling onto the shallow seabed. The anxiety that had been twisting inside of him dissipated to a warm contentment. There was no doubt in his mind: this is what Jessie would have wanted.
+
+As he turned back, Andrew watched a young golden retriever plunge into the ocean, chasing after a tennis ball his owner had tossed into the blue depths. He watched the dog frolic in the water and started to laugh.`
     },
   ];
   

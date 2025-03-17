@@ -145,7 +145,7 @@ const PageLayout = ({
       return {
         '& p': {
           marginBottom: '2rem', // Increased paragraph spacing for full content
-          lineHeight: '2'       // Increased line height for readability
+          lineHeight: '2'      // Increased line height for readability
         }
       };
     }

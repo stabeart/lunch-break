@@ -25,10 +25,6 @@ const Archive = () => {
   return (
     <PageLayout title="Archive">
       <div className="space-y-12">
-        <p className="text-xl mb-8">
-          Coming Soon...
-        </p>
-
         <div className="space-y-12">
           {archivedPieces.map((piece) => (
             <div key={piece.id} className="text-left border-b border-gray-200 pb-8">
