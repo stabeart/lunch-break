@@ -37,7 +37,7 @@ export const weeklySpecials = [
       title: "An Unplanned Interment",
       author: "Spencer Keene",
       authorBio: "Spencer Keene (he/him) is a writer and lawyer from Vancouver, BC. His poetry and short fiction have appeared in a variety of print and digital publication, including SAD Magazine, Sea to Sky Review, Star*Line Magazine, Across the Margin, and Candlelit Chronicles.",
-      authorWebsite: "www.spencerkeene.ca",
+      authorWebsite: "https://www.spencerkeene.ca/",
       date: "March 17, 2025",
       type: "prose",
       isCurrent: true,
