@@ -24,7 +24,7 @@ const WeeklySpecials = () => {
 
   return (
     <PageLayout 
-      title="Weekly Special" 
+      title="Weekly Feature" 
       contentSize="wide"
       showDecorativeImages={true}
     >
