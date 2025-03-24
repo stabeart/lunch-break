@@ -35,7 +35,7 @@ const WeeklySpecials = () => {
       </div>
       
       <div className="text-left max-w-prose mx-auto" style={{ 
-        fontFamily: 'Garamond, Georgia, serif',
+        
         fontSize: '1.125rem',
         lineHeight: '1.75'
       }}>
