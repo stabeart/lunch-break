@@ -34,17 +34,15 @@ const WeeklySpecials = () => {
         <p className="mb-8 text-sm">{featuredPiece.date}</p>
       </div>
       
-      <div className="text-left max-w-prose mx-auto" style={{ 
-        
-        fontSize: '1.125rem',
-        lineHeight: '1.75'
-      }}>
+      <div className="text-left max-w-prose mx-auto">
+      <div className="poetry-container" style={{ lineHeight: "1.5" }}>
         {contentLines.map((line, index) => (
           <p key={index} className={`mb-0.5 ${line.trim() === "" ? "mb-2" : ""}`}>
             {line.trim() === "" ? <br /> : line}
           </p>
         ))}
       </div>
+    </div>
       
       <div className="mt-12 mb-8 border-t border-gray-200 pt-8 text-left max-w-prose mx-auto">
         <h3 className="text-xl mb-3">About the Author</h3>
