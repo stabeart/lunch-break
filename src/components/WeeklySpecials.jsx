@@ -40,7 +40,7 @@ const WeeklySpecials = () => {
         lineHeight: '1.75'
       }}>
         {contentLines.map((line, index) => (
-          <p key={index} className={`mb-3 ${line.trim() === "" ? "mb-8" : ""}`}>
+          <p key={index} className={`mb-0.5 ${line.trim() === "" ? "mb-2" : ""}`}>
             {line.trim() === "" ? <br /> : line}
           </p>
         ))}
