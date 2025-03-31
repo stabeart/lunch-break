@@ -1,6 +1,44 @@
 // src/data/weeklySpecials.js
 export const weeklySpecials = [
   {
+    id: "2025-3/31",
+    title: "Sun Shone the Day He Died",
+    author: "Phil FLott",
+    authorBio: "Phil Flott is a retired carpenter. His poems have been in Sangam, Last Stanza, Raven's Perch, and others.",
+    date: "March 31, 2025",
+    type: "poetry",
+    isCurrent: true,
+    content: `In our final visit,
+I almost got holy on him,
+but by then he’d forgiven in tears.
+I, too, finally felt it,
+the last to have Fred’s laced hands
+around my neck as I carried
+his precious body back
+to his hospital bed that afternoon.
+
+Next morning
+the phone call
+as I breakfasted:
+“You’d better get over here.”
+
+I went for one last look,
+pressed down on his still warm chest,
+surprising me with an exhalation,
+comfort to my grieving hands.
+
+“You did it,”
+I told him.
+He’d died well,
+had made us brothers
+make up.
+
+I walked to the kitchen,
+couldn’t wedge enough glazed donuts
+in my mouth,
+for the hunger.`
+  },
+  {
     id: "2025-3-24",
     title: "Nasturtiums",
     author: "Glenis Moore",
@@ -8,7 +46,7 @@ export const weeklySpecials = [
     authorWebsite: "https://glenis15.substack.com/",
     date: "March 24, 2025",
     type: "poetry",
-    isCurrent: true,
+    isCurrent: false,
     content:`Burning orange in the hot sun,
 trumpets of summer rambling
 over the garden like noisy children
