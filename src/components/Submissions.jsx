@@ -10,8 +10,7 @@ const Submissions = () => {
         <div className="space-y-8 text-center">
           <div>
             <p className="mb-10">
-              For our first issue, we're looking for work that explores remnants, remainders, and reminders. Is a coffee ring just a stain when it outlives the mug? Does a footprint exist? Give us anything!
-            </p>
+            Our reading period for written work in the first issue is <b>now closed.</b> However, we are still accepting submissions for online publication.            </p>
             <h2 className="text-2xl mb-5">guidelines</h2>
             <p className="mb-3">
               Our submissions are open to anyone and everyone. We accept poetry, fiction, creative nonfiction, essays, and visual art.
@@ -35,12 +34,12 @@ const Submissions = () => {
 
           <div>
             <h2 className="text-2xl mb-5">reading period</h2>
-            <p className="mb-3">Our reading period for written work closes <b>May 1<sup>st</sup></b></p> 
-            <p className="mb-3">We accept visual art year-round</p>
-            <p className="mb-6">We aim to respond within one month</p>
+            <p className="mb-3">We accept submissions for online year-round. Submissions for print are now closed.</p> 
+            <p className="mb-3">We accept visual art year-round.</p>
+            <p className="mb-6">We aim to respond within one month.</p>
           </div>
         </div>
-      </div>
+      </div> 
     </PageLayout>
   );
 };

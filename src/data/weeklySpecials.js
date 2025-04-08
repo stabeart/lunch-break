@@ -8,17 +8,17 @@ export const weeklySpecials = [
     date: "April 8, 2025",
     type: "poetry",
     isCurrent: true,
-    content: `If everyone
-wished
+    content: `      If everyone
+    wished
 
-for quiet
-time
+    for quiet
+    time
 
-we might
-hear
+    we might
+    hear
 
-the creek
-behind the trees.`
+    the creek
+    behind the trees.`
   },
   {
     id: "2025-3/31",
