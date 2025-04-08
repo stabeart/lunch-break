@@ -1,13 +1,33 @@
 // src/data/weeklySpecials.js
 export const weeklySpecials = [
   {
+    id: "2025-4-8",
+    title: "Communion",
+    author: "Josh Mahler",
+    authorBio: "Josh Mahler lives and writes in Virginia. His poems have appeared in Denver Quarterly, Tar River Poetry, Quarter After Eight, South Dakota Review, The Louisville Review, The Carolina Quarterly, Valparaiso Poetry Review, Potomac Review, The Southern Poetry Anthology, from Texas Review Press, and elsewhere.",
+    date: "April 8, 2025",
+    type: "poetry",
+    isCurrent: true,
+    content: `If everyone
+wished
+
+for quiet
+time
+
+we might
+hear
+
+the creek
+behind the trees.`
+  },
+  {
     id: "2025-3/31",
     title: "Sun Shone the Day He Died",
     author: "Phil FLott",
     authorBio: "Phil Flott is a retired carpenter. His poems have been in Sangam, Last Stanza, Raven's Perch, and others.",
     date: "March 31, 2025",
     type: "poetry",
-    isCurrent: true,
+    isCurrent: false,
     content: `In our final visit,
 I almost got holy on him,
 but by then he’d forgiven in tears.
