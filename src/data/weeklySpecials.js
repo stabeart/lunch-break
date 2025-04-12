@@ -21,7 +21,7 @@ export const weeklySpecials = [
     behind the trees.`
   },
   {
-    id: "2025-3/31",
+    id: "2025-3-31",
     title: "Sun Shone the Day He Died",
     author: "Phil FLott",
     authorBio: "Phil Flott is a retired carpenter. His poems have been in Sangam, Last Stanza, Raven's Perch, and others.",
