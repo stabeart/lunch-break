@@ -1,13 +1,32 @@
 // src/data/weeklySpecials.js
 export const weeklySpecials = [
   {
+    id: "2025-4-14",
+    title: "One Evening in East Texas",
+    author: "Christopher Lummus",
+    authorBio: "Christopher Lummus once taught his granddaughter to hold still enough that a hummingbird would land in the sugar water she held. He is an avid reader who enjoys writing memoiristic vignettes, many about his life at the end of Squirrel Road, East Texas.",
+    date: "April 14, 2025",
+    type: "prose",
+    isCurrent: true,
+    content: `It was a clear and humid evening, the mist was just starting to rise from the pond. The old weimar woke and yawned and rose, stretching his backbone by walking forward with only his front feet until his joints cracked. He came over to me and bumped my Kindle with his nose and laid his chin on my knee. He looked up at me with large, expectant eyes and I knew… It was 7:45 PM. 
+
+Watson is a thoughtful and caring dog. He worries about the young catfish in the pond. Every evening just before 8:00, he gets my attention and when I say "Let's go feed the catfish." He hops back, drops his head, bows his neck, and starts jumping like a frisky colt. I go to the garage, fill a can with floating catfish food, arm myself with a sharp garden hoe and head outdoors. Gladys picks up her walking stick and comes outside with Watson where she meets Waddy, the terrier mix. We start our evening stroll to the pond, following a mowed path. At the stock gate, Watson waits while Waddy the terrier jumps between the barbed wire strands as Gladys and I bring up the rear. Emmie the Shih Tzu decided to stay home where she usually spends her time licking her toes, the furniture, and the carpet. 
+
+Feeding the catfish is interesting. The fish can feel or hear us walking up and know that it's feeding time. The little bluegill, brim and minnows are in the shallows waiting and facing the shore. The catfish are circling just a little farther out. I toss a handful of food to the small fish and they explode into action to get what they can before the catfish and turtles come in. I toss the rest of the food farther out and the waiting catfish make the water boil. 
+
+I suggest to Gladys that we should walk with the dogs across the dam to see if any wood duck eggs are in the duck house. All we have to do is say to the dogs, "Let's go," and they are off. We proceed across the dam and indeed, there are six eggs in the duck house. It will be the second batch of the wood duck season. The sunset is brilliant and it is time to head back to the house. I shout to the dogs and they are off like race horses from a starting gate. Enroute and well ahead of Gladys and me, Waddy, the wise, outdoor country dog spots something moving in the tall grass north of us near the cow pen and goes to investigate. Watson the Weimaraner, the city bred, the tenderfoot, the "huntin' dawg" follows and sees Waddy pointing at something from what is a safe distance. Watson charges in and starts alternately pointing, charging and jumping in close to what Waddy is staying back from. I wonder if they have found a snake and move forward with my garden hoe. A small, black and white object makes a run for the cow pen with Watson in hot pursuit. Gladys and I shout, whistle and try to get Watson's attention. The skunk gets away and Watson rolls in the grass. He trots back to us with a big "huntin' dawg" grin on his face. At that point his life was probably in danger from either Gladys or me but we restrained ourselves and told him to go "to the house!" We catch up and find that he does, indeed, stink. Luckily for him and for us he only received a small shot from the skunk and not the full load. We (the corporate "We", meaning mostly Gladys) scrub him down with a mixture of peroxide and detergent using rubber gloves and a long-handled scrub brush. He spent a lonely night by himself in the laundry room. 
+
+Next morning he was turned loose in the house again thanks to a light spraying from the skunk and quick action by Gladys in getting the anti-skunk wash ready so fast. Gladys is a tough country gal raised on a ranch in the Texas Panhandle and handles herself well around varmints. What a nice, intimate evening on the eve of Fathers Day at the intersection on Squirrel Road of Dog and Skunk.
+`
+  },
+  {
     id: "2025-4-8",
     title: "Communion",
     author: "Josh Mahler",
     authorBio: "Josh Mahler lives and writes in Virginia. His poems have appeared in Denver Quarterly, Tar River Poetry, Quarter After Eight, South Dakota Review, The Louisville Review, The Carolina Quarterly, Valparaiso Poetry Review, Potomac Review, The Southern Poetry Anthology, from Texas Review Press, and elsewhere.",
     date: "April 8, 2025",
     type: "poetry",
-    isCurrent: true,
+    isCurrent: false,
     content: `      If everyone
     wished
 
