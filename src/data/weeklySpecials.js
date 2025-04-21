@@ -1,13 +1,32 @@
 // src/data/weeklySpecials.js
 export const weeklySpecials = [
   {
+    id: "2025-4-21",
+    title: "A Group of 13 Blank Notebooks (from the library of Joan Didion)",
+    author: "JoAnna Scandiffio",
+    authorBio: "JoAnna Scandiffio is a gemologist living in San Francisco. Her poems are like bird nests, made with fragments randomly connected to hold the moment. She is like the old medieval monks who copied verses in colored inks so the world could sing forever. Her work has appeared in Calyx, The Poeming Pigeon, Poets 11, Sugared Water, The MacGuffin, Italian Americana, The RavensPerch, The Ekphrastic Review, and other journals. She is a Pushcart Prize Nominee, and a finalist for the Jane Underwood Prize. Her chapbook 'water is never still' is forthcoming from Finishing Line Press.",
+    date: "April 21, 2025",
+    type: "poetry",
+    isCurrent: true,
+    content: `sold to biblical scholars
+mystery writers
+collectors of rare manuscripts
+and ephemera
+science fiction editors
+soothsayers
+beekeepers
+parents whose children
+like to draw
+trees with snakes`
+  },
+  {
     id: "2025-4-14",
     title: "One Evening in East Texas",
     author: "Christopher Lummus",
     authorBio: "Christopher Lummus once taught his granddaughter to hold still enough that a hummingbird would land in the sugar water she held. He is an avid reader who enjoys writing memoiristic vignettes, many about his life at the end of Squirrel Road, East Texas.",
     date: "April 14, 2025",
     type: "prose",
-    isCurrent: true,
+    isCurrent: false,
     content: `It was a clear and humid evening, the mist was just starting to rise from the pond. The old weimar woke and yawned and rose, stretching his backbone by walking forward with only his front feet until his joints cracked. He came over to me and bumped my Kindle with his nose and laid his chin on my knee. He looked up at me with large, expectant eyes and I knew… It was 7:45 PM. 
 
 Watson is a thoughtful and caring dog. He worries about the young catfish in the pond. Every evening just before 8:00, he gets my attention and when I say "Let's go feed the catfish." He hops back, drops his head, bows his neck, and starts jumping like a frisky colt. I go to the garage, fill a can with floating catfish food, arm myself with a sharp garden hoe and head outdoors. Gladys picks up her walking stick and comes outside with Watson where she meets Waddy, the terrier mix. We start our evening stroll to the pond, following a mowed path. At the stock gate, Watson waits while Waddy the terrier jumps between the barbed wire strands as Gladys and I bring up the rear. Emmie the Shih Tzu decided to stay home where she usually spends her time licking her toes, the furniture, and the carpet. 
