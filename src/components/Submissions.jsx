@@ -10,7 +10,7 @@ const Submissions = () => {
         <div className="space-y-8 text-center">
           <div>
             <p className="mb-10">
-            Our reading period for written work in the first issue is <b>now closed.</b> However, we are still accepting submissions for online publication.            </p>
+            Our reading period is <b>now closed.</b> </p>
             <h2 className="text-2xl mb-5">guidelines</h2>
             <p className="mb-3">
               Our submissions are open to anyone and everyone. We accept poetry, fiction, creative nonfiction, essays, and visual art.
@@ -34,8 +34,7 @@ const Submissions = () => {
 
           <div>
             <h2 className="text-2xl mb-5">reading period</h2>
-            <p className="mb-3">We accept submissions for online year-round. Submissions for print are now closed.</p> 
-            <p className="mb-3">We accept visual art year-round.</p>
+            <p className="mb-3">Print and online submissions are now closed.</p> 
             <p className="mb-6">We aim to respond within one month.</p>
           </div>
         </div>

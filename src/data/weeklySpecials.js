@@ -1,13 +1,45 @@
 // src/data/weeklySpecials.js
 export const weeklySpecials = [
   {
+    id: "2025-4-27",
+    title: "Anticlimax",
+    author: "Kalina Smith",
+    authorBio: "Kalina (she/her) is mostly a poet, but her fiction and creative nonfiction have also been published. She is a high school English teacher responsible for many courses, including creative writing. Kalina has previously been published in Nebo, A Literary Journal, The Ignatian, FLARE: The Flagler Review, the Cackling Kettle, ONE ART: A Journal of Poetry, RedRoseThorns,  Down in the Dirt, and the Wayfarer and has work forthcoming in The Font, Porcupine, Superfan, The Dawn Review, Schlock!, and Pfudalmda Dadamag. She currently serves as poetry editor for Shadowplay. You can find her on Instagram @kalinasmithpoetry. ",
+    date: "April 27, 2025",
+    type: "prose",
+    isCurrent: true,
+    content: `When Lacy woke up, she wasn’t surprised to see that the space beside her in bed was empty, crumpled white sheets giving away that she’d previously had someone there. She was, however, surprised to see that it was dark outside. Eric had left earlier than usual.
+
+The sex that night had been fairly half-hearted on his part. He’d kept his eyes on the wall, and he wasn’t rough at all. He barely kissed her, barely even touched her. His hands stayed on her waist, lazily guiding her into him. She’d wondered what was wrong with him, but that meant talking, and that usually meant talking about something that wasn’t her.
+
+She rested her hands on her stomach and sighed. She was naked, and she could feel a few stretch marks that were forming over her flesh. She’d never really had those before now.
+
+Turning onto her side, her mind wandered to Eric. She could smell his Ralph Lauren cologne and Marlboro Lights on his pillow. If she focused hard enough, she could smell his shampoo and the Irish Spring bar of soap that he used, too. She wondered if his house smelled exactly like this. She also wondered if that was exactly what his bed at home smelled like, if that was what his wife was smelling right now, too.
+
+Lacy wanted to know what Eric looked like when he was getting ready for work at the advertising office that he worked at, if he groaned when the alarm went off, if he immediately jumped in the shower or bushed his teeth first. She wondered if he took his coffee black or if he liked cream or sugar. Did he prefer waffles or pancakes? Did he even eat breakfast? Lacy wanted to know if he kissed his wife goodbye and woke his kids up to tell him that he was leaving.
+
+Eric didn't want any more kids, as he'd told her one night as he was pulling his underwear on. That’s why he always pulled out of her before he came. He had three at home: two boys and a girl. The girl was his favorite. She was the youngest and she looked like him. She had his nose.
+
+Lacy had never seen her, but she could picture her. She wondered if her daughter would look like her, if she’d look like Eric. Maybe she’d look Eric’s other daughter.
+
+Lacy could picture the two little girls together, both the spitting images of Eric, but with longer hair. She can see the two of them wearing matching dresses in purple, Lacy’s favorite color. Maybe the boys would play with them some day. But probably not. In the three years that Lacy has known Eric, she has known that he didn't want to have kids with her. He didn't want to marry her. Therefore, her baby wouldn’t know her siblings. Maybe that was for the best.
+
+Lacy felt better with the blanket and sheets over her head. It reminded her of when she and her younger brother had made blanket forts when they were kids. They brought pillows. He brought his action figures. She brought books. She tried to read to him, but he was too busy making Batman fight a pro wrestler.
+
+Batman always won. She’d buy her daughter a Batman action figure when she was born. She wanted her to know that she was a winner no matter what. Maybe she’d only have one parent. Maybe she’d have no siblings. Maybe she’d wonder about her dad. But she’d never question
+
+whether or not Lacy loved her, and she’d never wonder if she was special. She was special. She was Lacy’s and she was Eric’s, and Lacy had never loved anyone like she’d loved Eric.
+
+Until now.`
+  },
+  {
     id: "2025-4-21",
     title: "A Group of 13 Blank Notebooks (from the library of Joan Didion)",
     author: "JoAnna Scandiffio",
     authorBio: "JoAnna Scandiffio is a gemologist living in San Francisco. Her poems are like bird nests, made with fragments randomly connected to hold the moment. She is like the old medieval monks who copied verses in colored inks so the world could sing forever. Her work has appeared in Calyx, The Poeming Pigeon, Poets 11, Sugared Water, The MacGuffin, Italian Americana, The RavensPerch, The Ekphrastic Review, and other journals. She is a Pushcart Prize Nominee, and a finalist for the Jane Underwood Prize. Her chapbook 'water is never still' is forthcoming from Finishing Line Press.",
     date: "April 21, 2025",
     type: "poetry",
-    isCurrent: true,
+    isCurrent: false,
     content: `sold to biblical scholars
 mystery writers
 collectors of rare manuscripts
