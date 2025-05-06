@@ -1,13 +1,27 @@
 // src/data/weeklySpecials.js
 export const weeklySpecials = [
   {
+    id: "2025-5-6",
+    title: "Carpenter Bees",
+    author: "Mackenzie Kae",
+    authorBio: "Mackenzie Kae is a writer living in Kentucky. She enjoys caring for rambunctious beings and floating through fantasies. Her work has appeared in Bright Flash Literary Review, Corvus Review, Last Leaves Magazine, and Subliminal Surgery.",
+    date: "May 6, 2025",
+    type: "prose",
+    isCurrent: true,
+    content: `the little winged beasts have devoured the side stairs. my father returns from the thrift store with a vintage tennis racket. sitting in the yard, headphones on, i watch him perfect his stroke.
+
+    WHACK! they fall like toppled statues. WHACK! the frequency matches the drumbeats. i think little of this genocide. this is the lesson of my folks: you gotta do what you gotta do. that is to say, survival is matched with the word must, and married with the word sacrifice. let no beast devour your stairs lest they devour your very home.
+
+the sun makes its descent, i lie upside down under my quilt, my radio on. WHACK! the radio host murmurs in marble. WHACK! i dream of toppling staircases.`
+  },
+  {
     id: "2025-4-27",
     title: "Anticlimax",
     author: "Kalina Smith",
     authorBio: "Kalina (she/her) is mostly a poet, but her fiction and creative nonfiction have also been published. She is a high school English teacher responsible for many courses, including creative writing. Kalina has previously been published in Nebo, A Literary Journal, The Ignatian, FLARE: The Flagler Review, the Cackling Kettle, ONE ART: A Journal of Poetry, RedRoseThorns,  Down in the Dirt, and the Wayfarer and has work forthcoming in The Font, Porcupine, Superfan, The Dawn Review, Schlock!, and Pfudalmda Dadamag. She currently serves as poetry editor for Shadowplay. You can find her on Instagram @kalinasmithpoetry. ",
     date: "April 27, 2025",
     type: "prose",
-    isCurrent: true,
+    isCurrent: false,
     content: `When Lacy woke up, she wasn’t surprised to see that the space beside her in bed was empty, crumpled white sheets giving away that she’d previously had someone there. She was, however, surprised to see that it was dark outside. Eric had left earlier than usual.
 
 The sex that night had been fairly half-hearted on his part. He’d kept his eyes on the wall, and he wasn’t rough at all. He barely kissed her, barely even touched her. His hands stayed on her waist, lazily guiding her into him. She’d wondered what was wrong with him, but that meant talking, and that usually meant talking about something that wasn’t her.
