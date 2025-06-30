@@ -1,13 +1,45 @@
 // src/data/weeklySpecials.js
 export const weeklySpecials = [
   {
+    id: "2025-6-30",
+    title: "Small Things",
+    author: "Rina Palumbo",
+    authorBio: "Rina Palumbo (she/her) is working on a novel and two long-form nonfiction writing projects, in addition to short fiction, creative nonfiction, and prose poetry. Her work appears in The Hopkins Review, Ghost Parachute, Milk Candy, Bending Genres, Identity Theory, Stonecoast Review, and others.",
+    date: "June 30, 2025",
+    type: "prose",
+    isCurrent: true,
+    content: `“My daughter is not a thief,” my mother said as she opened the screen door and walked toward the small man behind the store counter. She stood there, tense and coiled, daring Mr. Peretti to prove her otherwise. I stood next to her, Mr. Peretti’s dark eyes riveted to me. I stared back at him, silent in my humiliation.
+
+    “Do you think we don’t have money? Don’t we always pay our bill the end of the month? Why would Marisa do this? She is a good girl, gets good marks in school, why would she do this?”
+
+    He smiled at her, shrugged his shoulders and said, “I don’t know Antonietta, kids sometimes do things and who knows why. But I saw her, with my own eyes I saw her, put a chocolate in her pocket.” His gaze shifted to my mother’s face.
+
+I felt the atmosphere change. My mother had kept her eyes on Mr. Peretti the whole time. When she finally looked down at me, my heart was pounding so hard in my chest that it filled my ears and the whole world.
+
+Turning back to my Mr. Peretti, she smiled and said, “Chocolate. Marisa do you want some chocolate? Give her chocolate, give her two, I will pay,” she said, hurrying through her words as she dug her wallet out of her purse and placed a dollar bill on the counter.
+
+Silently, Mr. Peretti took the money and handed me two chocolate bars. My mother took one out of my hand and handed it back. “Your daughter, Connie, she has a little girl, let her have this as a little present.”
+
+“Thank you Antonietta,” he said. My mother took me by the hand and we walked through the small corner store and out the door. Before the screen slammed shut behind us, I turned back to see Mr. Peretti place the candy bar back with the others on the counter top. I couldn’t read the expression on his face but I didn’t really want to. As soon as the door closed behind us, my mother let go of my hand and walked hurriedly ahead of me. I lagged behind, cupping the wrapped piece of chocolate in my hands, holding it the way Father Orsini told us to hold the holy wafer for Communion.
+
+It was a small thing in a bigger thing. A single red whistle in a glass jar full of blue ones. It was one thing among many many more of the same. A box of Crayola markers on top of several more boxes surrounded on all sides by even more boxes of colored markers. It was a temptation of riches, chocolate bars wrapped in gold foil and stacked in pyramids like bricks at Fort Knox.
+
+All these things I stole. Even though the whistle didn’t work that well; the markers quickly dried out; and the candy, like all penny candy never tasted as good as it looked; the small things, hidden in a pocket and taken out in the privacy of my bedroom, had given me a thrill that saturated my being.
+
+Walking home with my mother that day, holding the candy, the wrapper throwing off splinters of sunlight, that thrill seemed too small to ever fill me again. We didn’t talk on the short walk home. My mother unlocked the back door that lead into our kitchen and crossed the
+threshold without looking back. I immediately knew her attention was on the crying baby in the nursery. My father walked into the kitchen saying nothing. They exchanged a look and he went back to watching television as my mother kept walking to my sister’s room.
+
+Alone, I looked down at the candy bar, unable to gleam in the muted indoor light, and placed it, on the Formica counter, useless to me now. 
+    `
+  },
+  {
     id: "2025-5-6",
     title: "Carpenter Bees",
     author: "Mackenzie Kae",
     authorBio: "Mackenzie Kae is a writer living in Kentucky. She enjoys caring for rambunctious beings and floating through fantasies. Her work has appeared in Bright Flash Literary Review, Corvus Review, Last Leaves Magazine, and Subliminal Surgery.",
     date: "May 6, 2025",
     type: "prose",
-    isCurrent: true,
+    isCurrent: false,
     content: `the little winged beasts have devoured the side stairs. my father returns from the thrift store with a vintage tennis racket. sitting in the yard, headphones on, i watch him perfect his stroke.
 
     WHACK! they fall like toppled statues. WHACK! the frequency matches the drumbeats. i think little of this genocide. this is the lesson of my folks: you gotta do what you gotta do. that is to say, survival is matched with the word must, and married with the word sacrifice. let no beast devour your stairs lest they devour your very home.
