@@ -1,13 +1,30 @@
 // src/data/weeklySpecials.js
 export const weeklySpecials = [
   {
+    id: "2025-7-8",
+    title: "roaches",
+    author: "nat raum",
+    authorBio: "nat raum is a disabled artist, writer, and genderless disaster based on unceded Piscataway and Susquehannock land in Baltimore. They’re the editor-in-chief of fifth wheel press. Their writing is published or forthcoming with Split Lip Magazine, BRUISER, beestung, Gone Lawn, and others. ",
+    authorWebsite: "https://www.natraum.com/",
+    date: "July 8, 2025",
+    type: "prose",
+    isCurrent: true,
+    content: `
+    the last hit is a bittersweet breath of butane, ember, and burnt filter tip that i find myself opting out of more often than not—i have never felt the urge to breathe fire, in or out, and so wave off the dregs of joint when it comes around the circle for what would be the last time. this defies the way i treat everything else, which is to say the way i am so used to sucking something to the point of parchedness because i will have to scavenge for its successor.
+
+in love, i am usually a ground creature, slipping in and out of dumpsters, ashtrays for morsels of sustenance. or perhaps one could call me a camel, a squirrel, hoarding for a less plentiful tomorrow. either way, at some point my scarcity mindset extended to my emotions and i have never been the same since. either way, lately i have been treating my heart as i do my gas tank, never able to afford filling it all the way and by proxy, needing to stop for replenishment all the time.
+
+eventually, i got used to this—it only takes thirty days to form a habit, ninety a pattern. december turned to january, february, march, yet nothing relented. i have survived half-empty and below for so long that parts of me have rusted over, forgone the last hit until i forgot what it tastes like altogether. i offer only roaches now: cock and weed. i sputter until i break, cry out into the night, to whomever might be listening. i convince myself that the hour is right to turn myself over, cross weakening limbs, and stare skyward into eternity
+    `
+  },
+  {
     id: "2025-6-30",
     title: "Small Things",
     author: "Rina Palumbo",
     authorBio: "Rina Palumbo (she/her) is working on a novel and two long-form nonfiction writing projects, in addition to short fiction, creative nonfiction, and prose poetry. Her work appears in The Hopkins Review, Ghost Parachute, Milk Candy, Bending Genres, Identity Theory, Stonecoast Review, and others.",
     date: "June 30, 2025",
     type: "prose",
-    isCurrent: true,
+    isCurrent: false,
     content: `“My daughter is not a thief,” my mother said as she opened the screen door and walked toward the small man behind the store counter. She stood there, tense and coiled, daring Mr. Peretti to prove her otherwise. I stood next to her, Mr. Peretti’s dark eyes riveted to me. I stared back at him, silent in my humiliation.
 
     “Do you think we don’t have money? Don’t we always pay our bill the end of the month? Why would Marisa do this? She is a good girl, gets good marks in school, why would she do this?”
