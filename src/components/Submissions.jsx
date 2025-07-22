@@ -34,7 +34,7 @@ const Submissions = () => {
 
           <div>
             <h2 className="text-2xl mb-5">reading period</h2>
-            <p className="mb-3">Print and online submissions are now closed.</p> 
+            <p className="mb-3">Print and online submissions are <b>now closed.</b> </p> 
             <p className="mb-6">We aim to respond within one month.</p>
           </div>
         </div>

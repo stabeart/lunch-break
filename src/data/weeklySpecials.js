@@ -1,6 +1,46 @@
 // src/data/weeklySpecials.js
 export const weeklySpecials = [
   {
+    id: "2025-7-22",
+    title: "Blood and Horses",
+    author: "Frances Jackson",
+    authorBio: "Frances Jackson is a writer from Georgia by way of Alabama. Her work has appeared in Eunoia Review, What Rough Beast (Indolent Books), and others.",
+    date: "July 22, 2025",
+    type: "prose",
+    isCurrent: true,
+    content: `
+    Study Hall: the din of living children tempering a more immediate, precious silence. Jennie locks her legs around chair base, and reaches across melamine. The desks collide, scraping together loudly, like kissing with braces.
+
+    “I’m sorry about your grandfather.”
+
+    Everyone knows Kathryn went to the funeral. She’s been absent for two days. There’s this theory that death makes you different, but no one can quite say how. It’s a little bit like having a scary older sister. Now, face hidden behind thick shield of hair, Kathryn looks sad and small, like a horse with blinders. Jennie hates horses: hates the way they smelled, hates how much her mom had loved them.
+    
+    Back then they’d lived far out. Sort of in the country. The kind of far out that means no visitors–tractors and motorcycle bars and glass on the ground. Aunt Allison let them use her address for the good schools.
+
+    Back then their neighbor had an eyepatch and two old Appaloosas: sagging skin, lenticular stares punctuated with flashes of understanding that summoned bile from the bottom of your stomach. They used to take them down to the brown creek to get some summer air. Or else Mike would leave them on the ropes all day, standing there, like what was the point to anything.
+
+    “They just need a little love,” her mother liked to say. “Don’t we all.” Then she’d look at them for way too long, soft hands cupping long faces.
+
+    “Mom, you’re creeping me out.” Jennie would laugh into a sky that felt blue and open forever. “They’re animals.” And what stuck was her mom’s stare, blank and deep.
+    
+    Back then the sun could scorch you if you weren’t careful, even through the heavy trees, atop the dewy grass that clung in wet clumps to your too-small shirt.
+
+    “It’s okay,” Kathryn says, sleeve dragging across wet cheek. “He was, like, really old.”
+
+    “It’s still hard,” comes Jennie’s gentle voice. Pressure builds beneath her mind’s damp loam. Now. How lucky you are, to live this charmed for this long.
+
+    Last time It came she’d taken scissors to the tip of her chin and chopped it all off–there. She wasn’t anyone’s spitting image anymore. In a fever she’d snatched the tiny wisps back, shoved them together–breath ragged, vision blurring–before the ground could burn the hair, subsume its inert matter. She still kept the Ziploc under Angie’s daybed and would stretch it against her face in the mirror, squinting. Trying to see Her. Timeless aberration, not back then but not Now either.
+
+    Kathryn heaves her body, now–biting her bridle-lip. The horses, maybe, knew about death: that was why they submitted so wholly, bucked and rebelled with such abrupt force. That was why they soothed–no, repulsed–so profoundly, back then
+    
+    “He’s in a better place,” Jennie says in a borrowed voice. Passing the platitude down the line made you part of a process: it’s your turn, you deal with this. Have fun.
+
+    “You think so?”
+
+    Kathryn tilts her head to look at Jennie and all Jennie sees is girl. Fat eyes pleading. She waits for that dull, deep Knowing but it won’t come and Jennie’s mom feels further down than she ever has, Now, with this ugly old grandfather sitting atop her, pressing his dead weight down, flattening her into soil when he should know She’s laughing sky, running river. If only she could will this old man back to life so she could kill him herself, punish him for the simple sin of existing as long as he was supposed to. If only she could shake Kathryn’s shoulders, shove her nose against that inky border: “See?” What you saw there was another question, but having looked meant something. It had to.
+    `
+  },
+  {
     id: "2025-7-8",
     title: "roaches",
     author: "nat raum",
@@ -8,7 +48,7 @@ export const weeklySpecials = [
     authorWebsite: "https://www.natraum.com/",
     date: "July 8, 2025",
     type: "prose",
-    isCurrent: true,
+    isCurrent: false,
     content: `
     the last hit is a bittersweet breath of butane, ember, and burnt filter tip that i find myself opting out of more often than not—i have never felt the urge to breathe fire, in or out, and so wave off the dregs of joint when it comes around the circle for what would be the last time. this defies the way i treat everything else, which is to say the way i am so used to sucking something to the point of parchedness because i will have to scavenge for its successor.
 
