@@ -15,8 +15,13 @@ const About = () => {
           <div>
             <h2 className="text-2xl mb-4">editorial team</h2>
             <p className="mb-2">Ingrid Alva</p>
+            <p className="mb-2">Rayna Moxley</p>
             <p className="mb-2">Sam Tabeart</p>
-            <p className="mb-2">Thomas Stearns</p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl mb-4">layout and design</h2>
+            <p clasName="mb-2">Eleanor Ford</p>
           </div>
 
           <div>

@@ -41,7 +41,7 @@ const LiteraryMenu = () => {
               specials
             </h2>
             <p className="mb-2">
-              <MenuLink href="/weekly">weekly feature</MenuLink>
+              <MenuLink href="/weekly">current feature</MenuLink>
             </p>
             <p className="mb-2">
               <MenuLink href="/archive">archive</MenuLink>

@@ -24,7 +24,6 @@ const WeeklySpecials = () => {
 
   return (
     <PageLayout 
-      title="Weekly Feature" 
       contentSize="wide"
       showDecorativeImages={true}
     >
@@ -66,7 +65,7 @@ const WeeklySpecials = () => {
           to="/archive" 
           className="text-lg hover:opacity-30 transition-opacity underline"
         >
-          View past weekly features
+          View past features
         </Link>
       </div>
     </PageLayout>
