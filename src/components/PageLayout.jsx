@@ -20,10 +20,13 @@ const PageLayout = ({
   children, 
   showMenuLink = true, 
   contentSize = 'default', // Options: 'default', 'wide', 'full'
-  showDecorativeImages = true
+  showDecorativeImages = true,
+  showTipJar = true,  // Add this prop
+  showTitle = true    // Add this prop
 }) => {
   const location = useLocation();
-  const showTipJar = location.pathname !== '/donate';
+  const defaultShowTipJar = location.pathname !== '/donate';
+  const shouldShowTipJar = showTipJar && defaultShowTipJar;
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isReducedSpacing = ['/submissions', '/about', '/donate'].includes(location.pathname);
   const isSmallScreen = useMediaQuery({ maxWidth: 1366 });
@@ -116,16 +119,18 @@ const PageLayout = ({
   };
 
   // Determine content width based on size prop
-  const getContentWidth = () => {
-    switch (contentSize) {
-      case 'wide':
-        return 'max-w-xl'; // Approximately 672px
-      case 'full':
-        return 'max-w-5xl'; // Increasing to approximately 1024px for full content
-      default:
-        return 'max-w-md'; // Default is approximately 448px
-    }
-  };
+const getContentWidth = () => {
+  switch (contentSize) {
+    case 'wide':
+      return 'max-w-xl'; // Approximately 672px
+    case 'full':
+      return 'max-w-5xl'; // Approximately 1024px for full content
+    case 'archive':
+      return 'max-w-7xl'; // Approximately 1280px for archive grid
+    default:
+      return 'max-w-md'; // Default is approximately 448px
+  }
+};
 
   // Determine padding based on content size
   const getContentPadding = () => {
@@ -219,6 +224,7 @@ const PageLayout = ({
         }}
       />
       
+      {showTitle && (
       <div style={styles.fixedTitle} className={isMobile ? 'hidden' : ''}>
         LUNCHBREAK<br />
         <span style={{ 
@@ -227,7 +233,8 @@ const PageLayout = ({
           fontSize: isMobile ? '3rem' : isSmallScreen ? '4rem' : contentSize === 'wide' ? '5rem' : contentSize === 'full' ? '4rem' : `${6 * scale}rem`
         }}>review</span>
       </div>
-      
+      )}
+
       {/* Plate background - only show for default and wide content */}
       {contentSize !== 'full' && (
         <div 
@@ -315,7 +322,7 @@ const PageLayout = ({
       </div>
 
       {/* Show tip jar for default and wide content, but not full width */}
-      {showTipJar && !isMobile && contentSize !== 'full' && (
+      {shouldShowTipJar && !isMobile && contentSize !== 'full' && (
         <TipJar position={contentSize === 'wide' ? 'far-right' : 'default'} />
       )}
       

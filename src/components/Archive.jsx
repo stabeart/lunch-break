@@ -7,11 +7,11 @@ const Archive = () => {
   const archivedPieces = getArchivedSpecials();
 
   // Function to create an excerpt for display
-  const createExcerpt = (content, type, maxLength = 150) => {
+  const createExcerpt = (content, type, maxLength = 120) => {
     // For poetry, just take the first few lines
     if (type === 'poetry') {
-      const lines = content.split('\n').slice(0, 3);
-      return lines.join('\n') + '...';
+      const lines = content.split('\n').slice(0, 2);
+      return lines.join('\n') + (lines.length < content.split('\n').length ? '...' : '');
     } 
     
     // For prose, take the first paragraph and truncate
@@ -23,59 +23,68 @@ const Archive = () => {
   };
 
   return (
-    <PageLayout title="Archive">
-      <div className="space-y-12">
-        <div className="space-y-12">
-          {archivedPieces.map((piece) => (
-            <div key={piece.id} className="text-left border-b border-gray-200 pb-8">
-              <h2 className="text-2xl mb-1">{piece.title}</h2>
-              <p className="mb-2 italic">by {piece.author}</p>
-              <p className="mb-4 text-sm">{piece.date}</p>
-              <div className="mb-4">
-                {piece.type === 'poetry' ? (
-                  // For poetry, preserve line breaks
-                  createExcerpt(piece.content, piece.type).split('\n').map((line, i) => (
-                    <p key={i}>{line}</p>
-                  ))
-                ) : (
-                  // For prose, display as regular paragraph
-                  <p>{createExcerpt(piece.content, piece.type)}</p>
-                )}
-              </div>
-              <div className="mb-4">
-                <p className="text-sm italic">
-                  {createExcerpt(piece.authorBio, 'prose', 100)}
-                  {piece.authorWebsite && (
-                    <span> · <a 
-                      href={piece.authorWebsite} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:opacity-70 transition-opacity underline"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      Website
-                    </a></span>
-                  )}
-                </p>
-              </div>
-              <Link 
-                to={`/archive/${piece.id}`} 
-                className="text-base hover:opacity-30 transition-opacity underline"
-              >
-                Read full piece
-              </Link>
-            </div>
-          ))}
-        </div>
-        
-        <div className="mt-6 text-center">
-          <Link 
-            to="/weekly" 
-            className="text-lg hover:opacity-30 transition-opacity underline"
+    <PageLayout 
+      title="Archive" 
+      contentSize="archive" // New content size for archive grid
+      showDecorativeImages={false}
+      showTipJar={false}
+      showTitle={false}
+    >
+      {/* Grid container */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        {archivedPieces.map((piece) => (
+          <div 
+            key={piece.id} 
+            className="group cursor-pointer"
           >
-            This week's special
-          </Link>
-        </div>
+            <Link to={`/archive/${piece.id}`} className="block h-full">
+              <div 
+                className="bg-white border-2 border-gray-300 rounded-lg p-6 h-full 
+                           shadow-sm hover:shadow-md transition-all duration-300 
+                           hover:border-gray-400 hover:-translate-y-1
+                           flex flex-col justify-center items-center text-center"
+                style={{
+                  background: 'linear-gradient(135deg, #fefefe 0%, #f8f9fa 100%)',
+                  minHeight: '200px'
+                }}
+              >
+                {/* Title */}
+                <h2 className="text-xl font-medium mb-3 group-hover:text-amber-800 transition-colors">
+                  {piece.title}
+                </h2>
+                
+                {/* Author */}
+                <p className="text-lg italic text-gray-700 mb-2">
+                  {piece.author}
+                </p>
+                
+                {/* Date */}
+                <p className="text-sm text-gray-500 mb-4">
+                  {piece.date}
+                </p>
+                
+                {/* Type badge */}
+                <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
+                  piece.type === 'poetry' 
+                    ? 'bg-blue-100 text-blue-800' 
+                    : 'bg-green-100 text-green-800'
+                }`}>
+                  {piece.type || 'poetry'}
+                </span>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
+      
+      {/* Navigation */}
+      <div className="text-center pt-6 border-t border-gray-200">
+        <Link 
+          to="/weekly" 
+          className="text-lg hover:opacity-30 transition-opacity underline"
+        >
+          Current special
+        </Link>
       </div>
     </PageLayout>
   );

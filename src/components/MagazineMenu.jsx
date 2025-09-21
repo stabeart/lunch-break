@@ -38,36 +38,36 @@ const LiteraryMenu = () => {
         <div className="space-y-12 text-center">
           <div>
             <h2 className="text-2xl mb-4" style={styles.sectionTitle}>
-              specials
+              Specials
             </h2>
             <p className="mb-2">
-              <MenuLink href="/weekly">current feature</MenuLink>
+              <MenuLink href="/weekly">Current Feature</MenuLink>
             </p>
             <p className="mb-2">
-              <MenuLink href="/archive">archive</MenuLink>
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-2xl mb-4" style={styles.georgia}>main courses</h2>
-            <p className="mb-2">
-              <MenuLink href="/current">current issue</MenuLink>
-            </p>
-            <p className="mb-2">
-              <MenuLink href="/past">past issues</MenuLink>
+              <MenuLink href="/archive">Archive</MenuLink>
             </p>
           </div>
 
           <div>
-            <h2 className="text-2xl mb-4" style={styles.georgia}>desserts</h2>
+            <h2 className="text-2xl mb-4" style={styles.georgia}>Main Courses</h2>
             <p className="mb-2">
-              <MenuLink href="/submissions">submissions</MenuLink>
+              <MenuLink href="/current">Current Issue</MenuLink>
+            </p>
+            <p className="mb-2">
+              <MenuLink href="/past">Past Issues</MenuLink>
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl mb-4" style={styles.georgia}>Desserts</h2>
+            <p className="mb-2">
+              <MenuLink href="/submissions">Submissions</MenuLink>
             </p>
           </div>
 
           <div className="text-base mt-8">
             <p className="mb-2">
-              <MenuLink href="/about">about us</MenuLink>
+              <MenuLink href="/about">About us</MenuLink>
             </p>
             {isMobile && (
               <p className="mt-2">
