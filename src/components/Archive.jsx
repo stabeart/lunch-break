@@ -49,7 +49,7 @@ const Archive = () => {
                 }}
               >
                 {/* Title */}
-                <h2 className="text-xl font-medium mb-3 group-hover:text-amber-800 transition-colors">
+                <h2 className="text-xl font-medium mb-3 hover:text-amber-800 transition-color">
                   {piece.title}
                 </h2>
                 
@@ -78,7 +78,7 @@ const Archive = () => {
       <div className="text-center pt-6 border-t border-gray-200">
         <Link 
           to="/weekly" 
-          className="text-lg hover:opacity-30 transition-opacity underline"
+          className="text-lg hover:text-amber-800 transition-color"
         >
           View our current feature
         </Link>

@@ -62,7 +62,7 @@ const ProseSpecials = () => {
       <div className="mt-12 text-center">
         <Link 
           to="/archive" 
-          className="text-lg hover:opacity-30 transition-opacity underline"
+          className="text-lg hover:text-amber-800 transition-colors"
         >
           View past features
         </Link>

@@ -24,11 +24,11 @@ const Submissions = () => {
               <p className="mb-3">
               We accept submissions by email at <a 
                 href="mailto:submissions@lunchbreakreview.com"
-                className="hover:opacity-30 transition-opacity underline">submissions@lunchbreakreview.com</a>. 
+                className="hover:text-amber-800 transition-color underline">submissions@lunchbreakreview.com</a>. 
                 We're happy to provide feedback on written submissions; please let us know if you would like it.
               </p>
               <p className="mb-10">We publish weekly features on our <a href="/weekly"
-              className="hover:opacity-30 transition-opacity underline">specials</a> page. These are pieces that we want to publish, 
+              className="hover:text-amber-800 transition-color underline">specials</a> page. These are pieces that we want to publish, 
                 but don't feel fit the theme of our upcoming issue. Print pieces are typically not posted online.</p>
           </div>
 

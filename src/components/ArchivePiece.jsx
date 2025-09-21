@@ -91,13 +91,13 @@ const ArchivePiece = () => {
       <div className="mt-12 text-center">
         <Link 
           to="/archive" 
-          className="text-lg hover:opacity-30 transition-opacity underline mr-6"
+          className="text-lg hover:text-amber-800 transition-color mr-6"
         >
           Back to archive
         </Link>
         <Link 
           to="/weekly" 
-          className="text-lg hover:opacity-30 transition-opacity underline"
+          className="text-lg hover:text-amber-800 transition-color"
         >
           View our current feature
         </Link>
