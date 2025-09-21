@@ -284,7 +284,7 @@ const getContentWidth = () => {
                   }`}
                   style={styles.georgia}
                 >
-                  ← Main Menu
+                  Menu
                 </Link>
               )}
               

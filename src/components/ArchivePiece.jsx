@@ -60,7 +60,6 @@ const ArchivePiece = () => {
 
   return (
     <PageLayout 
-      title="From the Archive" 
       contentSize={contentSize}
       showDecorativeImages={showDecorativeImages}
     >
@@ -100,7 +99,7 @@ const ArchivePiece = () => {
           to="/weekly" 
           className="text-lg hover:opacity-30 transition-opacity underline"
         >
-          View this week's feature
+          View our current feature
         </Link>
       </div>
     </PageLayout>
