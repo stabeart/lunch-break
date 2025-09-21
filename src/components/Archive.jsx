@@ -54,23 +54,20 @@ const Archive = () => {
                 </h2>
                 
                 {/* Author */}
-                <p className="text-lg italic text-gray-700 mb-2">
+                <p className="text-lg text-gray-700 mb-2">
                   {piece.author}
                 </p>
                 
-                {/* Date */}
-                <p className="text-sm text-gray-500 mb-4">
-                  {piece.date}
-                </p>
-                
-                {/* Type badge */}
-                <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
-                  piece.type === 'poetry' 
-                    ? 'bg-blue-100 text-blue-800' 
-                    : 'bg-green-100 text-green-800'
-                }`}>
-                  {piece.type || 'poetry'}
-                </span>
+                {/* Date and Type inline */}
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  <p className="text-sm text-gray-500">
+                    {piece.date}
+                  </p>
+                  <span className="text-gray-400">•</span>
+                  <span className="text-sm text-gray-600 font-medium">
+                    {piece.type || 'poetry'}
+                  </span>
+                </div>
               </div>
             </Link>
           </div>

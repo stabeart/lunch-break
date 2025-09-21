@@ -30,7 +30,7 @@ const ProseSpecials = () => {
     >
       <div className="text-center mb-10">
         <h2 className="text-2xl mb-1">{featuredPiece.title}</h2>
-        <p className="mb-2 text-lg italic"> {featuredPiece.author}</p>
+        <p className="mb-2 text-lg">{featuredPiece.author}</p>
         <p className="mb-8 text-sm">{featuredPiece.date}</p>
       </div>
       

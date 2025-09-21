@@ -29,7 +29,7 @@ const WeeklySpecials = () => {
     >
       <div className="text-center mb-8">
         <h2 className="text-2xl mb-1">{featuredPiece.title}</h2>
-        <p className="mb-6 text-lg italic"> {featuredPiece.author}</p>
+        <p className="mb-6 text-lg">{featuredPiece.author}</p>
         <p className="mb-8 text-sm">{featuredPiece.date}</p>
       </div>
       

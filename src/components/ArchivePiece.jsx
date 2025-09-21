@@ -66,7 +66,7 @@ const ArchivePiece = () => {
     >
       <div className="text-center mb-10">
         <h2 className="text-2xl mb-1">{piece.title}</h2>
-        <p className="mb-6 text-lg italic">by {piece.author}</p>
+        <p className="mb-6 text-lg">by {piece.author}</p>
         <p className="mb-8 text-sm">{piece.date}</p>
       </div>
       
