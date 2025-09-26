@@ -24,6 +24,7 @@ const About = () => {
           <div>
             <h2 className="text-2xl mb-4">Layout and Design</h2>
             <p clasName="mb-2">Eleanor Ford</p>
+            <p clasName="mb-2">Mattias RowenBale</p>
           </div>
 
           <div>
