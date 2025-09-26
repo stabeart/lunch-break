@@ -18,7 +18,7 @@ const About = () => {
             <h2 className="text-2xl mb-4">Editorial Team</h2>
             <p className="mb-2">Ingrid Alva</p>
             <p className="mb-2">Rayna Moxley</p>
-            <p className="mb-2">Sam Tabeart</p>
+            <p className="mb-2">Samuel Tabeart</p>
           </div>
 
           <div>
