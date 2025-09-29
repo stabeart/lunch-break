@@ -1,5 +1,40 @@
 // src/data/weeklySpecials.js
 export const weeklySpecials = [
+
+  {
+    id: "2025-9-29",
+    title: "Uncommon Grounds",
+    author: "Zary Fekete",
+    authorBio: "Zary Fekete grew up in Hungary. He has a debut novella (Words on the Page) out with DarkWinter Lit Press and a short story collection (To Accept the Things I Cannot Change: Writing My Way Out of Addiction) out with Creative Texts. He enjoys books, podcasts, and many many many films. Twitter and Instagram: @ZaryFekete",
+    date: "September 29, 2025",
+    type: "prose",
+    isCurrent: true,
+    content: `
+    A hiss of steam…the twist of metal into grooves…a crisp click of enamel touching tile.
+
+Uncommon Grounds has a rhythm, a hum that echoes the growth and harvest of the beans and the repeated cycles of sipped cups and clinking spoons. I’ve worked here five years, and in that time, I've come to see that the place contains a world. A microcosm, the universe in miniature. Lives cross. Every face is a story starting somewhere else but here just now. Every person is a world of magic, tragedy, or absurdity, and you can hear it if you listen close enough.
+
+Shabir and I have orbited each other’s worlds. We’ve lived and worked side by side, but we are from separate galaxies. I’m from just up the road—born in the mid-west…once was lost, now…found. But Shabir? His roots grew elsewhere, tangled in the soil of a conservative family half a world away, a place that casts shadows too long for him to grow free of.
+
+We met each other that first year, stumbling through shifts, mixing up orders, cleaning cups, pretending not to notice the moments of awkward silence. But we really met on a slow afternoon, the kind where the air is thick with nothing but time. I was flicking grains of sugar off the counter when I asked him, “What would you do if you woke up tomorrow and you were the last person on Earth?”
+
+He laughed—softly—and after a long beat, he said, “I’d stop worrying.”
+
+I looked at him and saw it. That low gravity pull. A forcefield of culture and belief, tugging, keeping him still within its sphere. He quietly allowed me in a bit that day. I didn’t know it yet, but those words, that laugh, would become the heartbeat of a deepening friendship. We started playing that question like a game, during down times when the place was empty, when we had nothing to do but stare. The questions varied: silly ones—“What would you do if you could only eat one food for the rest of your life?” (He said banak nuts, I said milk chocolate.) And then the deeper ones—“What would you do if you could go back and change one decision?” He dodged that one every time.
+
+He told me once that he’d come to America to start over. He went to a fundamentalist school back home, hoping to rewire himself, but the wires never matched up. So, he got on a plane and took this job. “This job?” I asked. He nodded, pointing at the floor. He said he surrounded himself with the coffee house staff, a crew of mostly queer coworkers, not because he wanted to embrace that part of himself, but because he thought, the closer he got to that truth, the more it would scare him out of it. He held a mirror to himself, hoping the reflection would shift. But it didn’t.
+
+One night, after the last customer, we sat in the back room, tossing stir sticks at the trash can. I asked him, without thinking too much about it, “What would you do if you could have any super power?”
+
+He froze. Then he looked at me—really looked at me—and the words came out in a whisper: “Tell my family the truth.” His voice cracked like old wood. My hand involuntarily raised, reaching toward his shoulder. But I stopped. I wanted to say something, a balm, but I had nothing. Instead, I just sat there with him.
+
+A few months later, Shabir left the café. He said he needed to figure things out. He hugged me, and it felt like he’d already made peace with something I didn’t understand. Before he left, he asked me a new one, “What would you do if we hadn’t met?”
+
+I answered right away. “I would be poorer.” That caught him. It took a second before his soft smile reappeared beneath wet eyes.
+
+I still think about him. Wonder if he found that super power. Wonder if that little game we played helped him the way it helped me.
+    `
+  },
   {
     id: "2025-7-22",
     title: "Blood and Horses",
@@ -7,7 +42,7 @@ export const weeklySpecials = [
     authorBio: "Frances Jackson is a writer from Georgia by way of Alabama. Her work has appeared in Eunoia Review, What Rough Beast (Indolent Books), and others.",
     date: "July 22, 2025",
     type: "prose",
-    isCurrent: true,
+    isCurrent: false,
     content: `
     Study Hall: the din of living children tempering a more immediate, precious silence. Jennie locks her legs around chair base, and reaches across melamine. The desks collide, scraping together loudly, like kissing with braces.
 
