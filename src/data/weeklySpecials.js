@@ -10,7 +10,7 @@ export const weeklySpecials = [
     type: "prose",
     isCurrent: true,
     content: `
-    A hiss of steam…the twist of metal into grooves…a crisp click of enamel touching tile.
+    A hiss of steam… the twist of metal into grooves… a crisp click of enamel touching tile.
 
 Uncommon Grounds has a rhythm, a hum that echoes the growth and harvest of the beans and the repeated cycles of sipped cups and clinking spoons. I’ve worked here five years, and in that time, I've come to see that the place contains a world. A microcosm, the universe in miniature. Lives cross. Every face is a story starting somewhere else but here just now. Every person is a world of magic, tragedy, or absurdity, and you can hear it if you listen close enough.
 
