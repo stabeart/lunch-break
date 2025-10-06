@@ -1,6 +1,30 @@
 // src/data/weeklySpecials.js
 export const weeklySpecials = [
+  {
+    id: "2025-10-6",
+    title: "Scone",
+    author: "Damon Pham",
+    authorBio: "Damon is an artist working with music, sound, language, and digital rendering. He grew up in California suburbs and most recently lived in Hồ Chí Minh City. He is an MFA candidate on the cross-disciplinary track at Brown’s Literary Arts program. Instagram: @damondpham",
+    date: "October 6, 2025",
+    type: "poetry",
+    isCurrent: true,
+    content: `
+    Serial swirls
+Italianate radiations
+black gourds and
+whispered
+psychoanalysis.
 
+I stay for you the full tub of saline.
+Your stomach retrieving percents.
+
+Spent the day
+a suffered fool
+inside
+a vignette
+effect.
+    `
+  },
   {
     id: "2025-9-29",
     title: "Uncommon Grounds",
@@ -8,7 +32,7 @@ export const weeklySpecials = [
     authorBio: "Zary Fekete grew up in Hungary. He has a debut novella (Words on the Page) out with DarkWinter Lit Press and a short story collection (To Accept the Things I Cannot Change: Writing My Way Out of Addiction) out with Creative Texts. He enjoys books, podcasts, and many many many films. Twitter and Instagram: @ZaryFekete",
     date: "September 29, 2025",
     type: "prose",
-    isCurrent: true,
+    isCurrent: false,
     content: `
     A hiss of steam… the twist of metal into grooves… a crisp click of enamel touching tile.
 
