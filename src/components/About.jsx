@@ -24,20 +24,19 @@ const About = () => {
           <div>
             <h2 className="text-2xl mb-4">Layout and Design</h2>
             <p clasName="mb-2">Eleanor Ford</p>
-            <p clasName="mb-2">Mattias RowenBale</p>
           </div>
 
           <div>
             <h2 className="text-2xl mb-4">Contact</h2>
             <p className="mb-2"><a 
                 href="mailto:editors@lunchbreakreview.com"
-                className="hover:opacity-30 transition-opacity underline"
+                className="hover:text-amber-800 transition-colors underline"
               >
                 editors@lunchbreakreview.com
               </a> <br></br>
               <a
                 href="https://www.instagram.com/lunchbreak_review/"
-                className="hover:opacity-30 transition-opacity underline"
+                className="hover:text-amber-800 transition-colorsunderline"
               >
                 Instagram Account  </a></p>
           </div>

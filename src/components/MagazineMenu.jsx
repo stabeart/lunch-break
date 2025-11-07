@@ -23,7 +23,7 @@ const MenuLink = ({ href, children, className, useGeorgia, isSpecial }) => (
       transition: 'opacity 0.3s ease-in-out',
       ...(isSpecial ? styles.sectionTitle : useGeorgia ? styles.georgia : {})
     }}
-    className={`hover:opacity-30 ${className}`}
+    className={`hover:text-amber-800 transition-colors ${className}`}
   >
     {children}
   </Link>
