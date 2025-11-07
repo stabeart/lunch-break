@@ -9,8 +9,13 @@ const Submissions = () => {
       <div className="text-center">
         <div className="space-y-8 text-center">
           <div>
-            <p className="mb-10">
-            Our reading period is <b>now closed.</b> </p>
+            <p className="mb-3">
+            Our reading period is <b>open.</b> </p>
+             <p className="mb-10">
+              <a 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeDZzckC4yrUee49dFFAhKJmUkLViBHSl80xGV2f2RiVvhqQg/viewform?usp=header"
+                className="hover:text-amber-800 transition-color underline">Click to submit</a>. 
+              </p>
             <h2 className="text-2xl mb-5">Guidelines</h2>
             <p className="mb-3">
               Our submissions are open to anyone and everyone. We accept poetry, fiction, creative nonfiction, essays, and visual art.
@@ -21,12 +26,6 @@ const Submissions = () => {
               Regardless of length, your submission should 
               be sent in a single pdf.
               </p>
-              <p className="mb-3">
-              We accept submissions by email at <a 
-                href="mailto:submissions@lunchbreakreview.com"
-                className="hover:text-amber-800 transition-color underline">submissions@lunchbreakreview.com</a>. 
-                We're happy to provide feedback on written submissions; please let us know if you would like it.
-              </p>
               <p className="mb-10">We publish weekly features on our <a href="/weekly"
               className="hover:text-amber-800 transition-color underline">specials</a> page. These are pieces that we want to publish, 
                 but don't feel fit the theme of our upcoming issue. Print pieces are typically not posted online.</p>
@@ -34,7 +33,7 @@ const Submissions = () => {
 
           <div>
             <h2 className="text-2xl mb-5">Reading Period</h2>
-            <p className="mb-3">Print and online submissions are <b>now closed.</b> </p> 
+            <p className="mb-3">Print and online submissions are <b>open.</b> </p> 
             <p className="mb-6">We aim to respond within one month.</p>
           </div>
         </div>
