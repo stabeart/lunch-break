@@ -36,7 +36,7 @@ const About = () => {
               </a> <br></br>
               <a
                 href="https://www.instagram.com/lunchbreak_review/"
-                className="hover:text-amber-800 transition-colorsunderline"
+                className="hover:text-amber-800 transition-colors underline"
               >
                 Instagram Account  </a></p>
           </div>

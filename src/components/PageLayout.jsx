@@ -250,18 +250,17 @@ const getContentPadding = () => {
                       flex justify-center items-center relative`} 
            style={{ zIndex: 2 }}>
         <div className={`w-full ${getContentWidth()} mx-auto`}>
-          <div 
-            className={`${getContentPadding()} shadow-lg rounded-sm ${
-              location.pathname === '/' ? 'transform transition-transform duration-300 hover:scale-[1.02]' : ''
-            }`}
-            style={{ 
-              ...styles.paperTexture,
-              borderColor: '#4d598b',
-              borderWidth: '4px',
-              borderStyle: 'solid'
-            }} 
-          >
-            <div style={styles.noisyOverlay} />
+<div 
+  className={`${getContentPadding()} shadow-lg rounded-sm ${
+    location.pathname === '/' ? 'transition-transform duration-300 hover:scale-[1.02]' : ''
+  }`}
+  style={{ 
+    ...styles.paperTexture,
+    borderColor: '#4d598b',
+    borderWidth: '4px',
+    borderStyle: 'solid',
+  }} 
+>
 
 <div className="relative" style={{ zIndex: 1 }}>
   {showMenuLink && (
