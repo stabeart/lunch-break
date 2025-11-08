@@ -121,16 +121,16 @@ const getContentWidth = () => {
 };
 
   // Determine padding based on content size
-  const getContentPadding = () => {
-    switch (contentSize) {
-      case 'wide':
-        return isReducedSpacing ? 'p-6' : 'p-10';
-      case 'full':
-        return isReducedSpacing ? 'p-6 px-8' : 'p-12 px-16'; // Increased horizontal padding for full
-      default:
-        return isReducedSpacing ? 'p-8' : 'p-16';
-    }
-  };
+const getContentPadding = () => {
+  switch (contentSize) {
+    case 'wide':
+      return isReducedSpacing ? 'pt-4 pb-6 px-6' : 'pt-6 pb-10 px-10';
+    case 'full':
+      return isReducedSpacing ? 'pt-4 pb-6 px-8' : 'pt-8 pb-12 px-16'; // Increased horizontal padding for full
+    default:
+      return isReducedSpacing ? 'pt-4 pb-8 px-8' : 'pt-8 pb-16 px-16';
+  }
+};
 
   // Custom paragraph spacing for full content
   const getContentStyle = () => {
@@ -263,48 +263,50 @@ const getContentWidth = () => {
           >
             <div style={styles.noisyOverlay} />
 
-            <div className="relative" style={{ zIndex: 1 }}>
-              {showMenuLink && (
-                <Link 
-                  to="/" 
-                  className={`block text-left hover:text-amber-800 transition-colors ${
-                    isMobile ? 'text-xl mb-4' : 'text-2xl mb-4'
-                  }`}
-                  style={styles.georgia}
-                >
-                  Menu
-                </Link>
-              )}
-              
-              <div className="text-center">
-                <h1 
-                  className={`${isReducedSpacing ? 'mb-6' : contentSize === 'full' ? 'mb-8' : 'mb-12'}`}
-                  style={styles.mainHeading}
-                >
-                  {title}
-                </h1>
-                <div 
-                  className={`text-[000000] ${
-                    isMobile 
-                      ? 'text-base' 
-                      : contentSize === 'full' 
-                        ? 'text-base leading-relaxed' 
-                        : 'text-lg'
-                  }`}
-                  style={getContentStyle()}
-                >
-                  {React.Children.map(children, child => {
-                    // For direct paragraphs in full content mode
-                    if (React.isValidElement(child) && child.type === 'p' && contentSize === 'full') {
-                      return React.cloneElement(child, {
-                        className: `${child.props.className || ''} mb-6 leading-relaxed`
-                      });
-                    }
-                    return processChildren(child);
-                  })}
-                </div>
-              </div>
-            </div>
+<div className="relative" style={{ zIndex: 1 }}>
+  {showMenuLink && (
+    <div className="text-center mb-2">
+      <Link 
+        to="/" 
+        className={`inline-block hover:text-amber-800 transition-colors ${
+          isMobile ? 'text-xl' : 'text-2xl'
+        }`}
+        style={styles.georgia} underlined
+      >
+        Menu
+      </Link>
+    </div>
+  )}
+  
+  <div className="text-center">
+    <h1 
+      className={`${isReducedSpacing ? 'mb-6' : contentSize === 'full' ? 'mb-8' : 'mb-12'}`}
+      style={styles.mainHeading}
+    >
+      {title}
+    </h1>
+    <div 
+      className={`text-[000000] ${
+        isMobile 
+          ? 'text-base' 
+          : contentSize === 'full' 
+            ? 'text-base leading-relaxed' 
+            : 'text-lg'
+      }`}
+      style={getContentStyle()}
+    >
+      {React.Children.map(children, child => {
+        // For direct paragraphs in full content mode
+        if (React.isValidElement(child) && child.type === 'p' && contentSize === 'full') {
+          return React.cloneElement(child, {
+            className: `${child.props.className || ''} mb-6 leading-relaxed`
+          });
+        }
+        return processChildren(child);
+      })}
+    </div>
+  </div>
+</div>
           </div>
         </div>
       </div>
