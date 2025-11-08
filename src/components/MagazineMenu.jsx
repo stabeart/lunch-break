@@ -40,33 +40,33 @@ const LiteraryMenu = () => {
             <h2 className="text-2xl mb-4" style={styles.sectionTitle}>
               Specials
             </h2>
-            <p className="mb-2">
+            <p className="text-xl mb-2" style={styles.georgia}>
               <MenuLink href="/weekly">Current Feature</MenuLink>
             </p>
-            <p className="mb-2">
+            <p className="text-xl mb-2" style={styles.georgia}>
               <MenuLink href="/archive">Archive</MenuLink>
             </p>
           </div>
 
           <div>
             <h2 className="text-2xl mb-4" style={styles.georgia}>Main Courses</h2>
-            <p className="mb-2">
+            <p className="text-xl mb-2" style={styles.georgia}>
               <MenuLink href="/current">Current Issue</MenuLink>
             </p>
-            <p className="mb-2">
+            <p className="text-xl mb-2" style={styles.georgia}>
               <MenuLink href="/past">Past Issues</MenuLink>
             </p>
           </div>
 
           <div>
             <h2 className="text-2xl mb-4" style={styles.georgia}>Desserts</h2>
-            <p className="mb-2">
+            <p className="text-xl mb-2" style={styles.georgia}>
               <MenuLink href="/submissions">Submissions</MenuLink>
             </p>
           </div>
 
           <div className="text-base mt-8">
-            <p className="mb-2">
+            <p className="mb-2" style={styles.georgia}>
               <MenuLink href="/about">About us</MenuLink>
             </p>
             {isMobile && (

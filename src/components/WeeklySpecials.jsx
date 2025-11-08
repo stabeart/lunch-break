@@ -52,7 +52,7 @@ const WeeklySpecials = () => {
               href={featuredPiece.authorWebsite} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-blue-600 hover:opacity-70 transition-opacity underline"
+              className="text-blue-600 hover:opacity-70 transition-opacity"
             >
               Visit {featuredPiece.author}'s Website
             </a>
@@ -63,7 +63,7 @@ const WeeklySpecials = () => {
       <div className="mt-8 text-center">
         <Link 
           to="/archive" 
-          className="text-lg hover:opacity-30 transition-opacity underline"
+          className="text-lg hover:text-amber-800 transition-colors"
         >
           View past features
         </Link>
