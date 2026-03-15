@@ -10,10 +10,11 @@ const Submissions = () => {
         <div className="space-y-8 text-center">
           <div>
             <p className="mb-3">
-            Our reading period is <b>open.</b> </p>
+            Our reading period is <b>open.</b> 
+            <br></br><b>Please Note</b>: we are <b>not</b> accepting submissions by email.</p>
              <p className="mb-10">
               <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeDZzckC4yrUee49dFFAhKJmUkLViBHSl80xGV2f2RiVvhqQg/viewform?usp=header"
+                href="https://duotrope.com/duosuma/submit/lunchbreak-review-VGMfJ"
                 className="hover:text-amber-800 transition-color underline">Click to submit</a>. 
               </p>
             <h2 className="text-2xl mb-5">Guidelines</h2>
